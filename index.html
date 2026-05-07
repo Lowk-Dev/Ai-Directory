@@ -1,0 +1,956 @@
+const tools = [
+{
+name:"ChatGPT",
+tagline:"The leading conversational AI assistant",
+description:"ChatGPT helps students, teachers, creators, and professionals with writing, coding, research, brainstorming, and productivity. It supports multimodal interactions including voice, images, files, and advanced reasoning workflows.",
+category:["Students","Teachers","Free","Under $10"],
+pricing:"Freemium",
+website:"https://chatgpt.com",
+logo:"https://logo.clearbit.com/openai.com",
+tags:["Writing","Research","Coding","Chatbot"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"300M+",
+updated:"2026-05-01",
+platform:["Web","iOS","Android","Mac","Windows"],
+aiType:"Writing AI",
+color:"#10A37F"
+},
+{
+name:"Claude",
+tagline:"Powerful AI for thoughtful writing and analysis",
+description:"Claude excels at long-context conversations, document analysis, coding help, and creative writing. Popular among researchers, students, and legal professionals for handling large files and nuanced reasoning.",
+category:["Students","Lawyers","Teachers","Free"],
+pricing:"Freemium",
+website:"https://claude.ai",
+logo:"https://logo.clearbit.com/anthropic.com",
+tags:["Writing","Research","Documents","Reasoning"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"40M+",
+updated:"2026-05-02",
+platform:["Web","iOS","Android"],
+aiType:"Writing AI",
+color:"#D97706"
+},
+{
+name:"Gemini",
+tagline:"Google’s multimodal AI assistant",
+description:"Gemini combines web intelligence, image generation, coding, and productivity features into one ecosystem. Students and professionals use it for learning, planning, and content creation.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://gemini.google.com",
+logo:"https://logo.clearbit.com/google.com",
+tags:["Research","Writing","Productivity","Multimodal"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"120M+",
+updated:"2026-04-28",
+platform:["Web","Android","iOS"],
+aiType:"Research AI",
+color:"#4285F4"
+},
+{
+name:"Perplexity",
+tagline:"AI-powered answer engine with citations",
+description:"Perplexity provides real-time research answers with web citations and deep research capabilities. Students, analysts, and lawyers use it for reliable information retrieval and summaries.",
+category:["Students","Lawyers","Free"],
+pricing:"Freemium",
+website:"https://www.perplexity.ai",
+logo:"https://logo.clearbit.com/perplexity.ai",
+tags:["Research","Search","Summarization","Citations"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"30M+",
+updated:"2026-05-03",
+platform:["Web","iOS","Android"],
+aiType:"Research AI",
+color:"#14B8A6"
+},
+{
+name:"NotebookLM",
+tagline:"Your AI notebook for research and learning",
+description:"NotebookLM helps users organize PDFs, notes, and sources while generating summaries, study guides, and audio overviews. Ideal for students, researchers, and educators.",
+category:["Students","Teachers","Free"],
+pricing:"Free",
+website:"https://notebooklm.google.com",
+logo:"https://logo.clearbit.com/google.com",
+tags:["Research","PDF","Summaries","Learning"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"15M+",
+updated:"2026-04-29",
+platform:["Web"],
+aiType:"Education AI",
+color:"#6366F1"
+},
+{
+name:"Canva AI",
+tagline:"AI-powered design for everyone",
+description:"Canva AI simplifies graphic design, presentations, social media, and video editing using AI generation tools. Teachers and creators use it to build engaging visual content quickly.",
+category:["Teachers","YouTubers","Free"],
+pricing:"Freemium",
+website:"https://www.canva.com",
+logo:"https://logo.clearbit.com/canva.com",
+tags:["Design","Presentation","Graphics","Video"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"180M+",
+updated:"2026-05-01",
+platform:["Web","iOS","Android"],
+aiType:"Design AI",
+color:"#00C4CC"
+},
+{
+name:"Gamma",
+tagline:"Beautiful AI presentations in minutes",
+description:"Gamma generates polished presentations, documents, and websites from simple prompts. Teachers and students use it for visually rich educational content.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://gamma.app",
+logo:"https://logo.clearbit.com/gamma.app",
+tags:["Presentation","Slides","Docs","Education"],
+featured:true,
+trending:true,
+rating:4.7,
+users:"12M+",
+updated:"2026-05-01",
+platform:["Web"],
+aiType:"Presentation AI",
+color:"#7C3AED"
+},
+{
+name:"ElevenLabs",
+tagline:"Ultra-realistic AI voices and dubbing",
+description:"ElevenLabs creates natural AI voiceovers, dubbing, and speech synthesis for videos, podcasts, and apps. Popular with YouTubers and educators.",
+category:["YouTubers","Teachers","Free"],
+pricing:"Freemium",
+website:"https://elevenlabs.io",
+logo:"https://logo.clearbit.com/elevenlabs.io",
+tags:["Voice","Speech","Audio","Narration"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"25M+",
+updated:"2026-05-04",
+platform:["Web"],
+aiType:"Voice AI",
+color:"#111827"
+},
+{
+name:"Descript",
+tagline:"Edit videos and podcasts like documents",
+description:"Descript combines video editing, transcription, overdubbing, and AI voice tools into one workflow. Widely used by creators and podcasters.",
+category:["YouTubers","Under $10"],
+pricing:"$8/month",
+website:"https://www.descript.com",
+logo:"https://logo.clearbit.com/descript.com",
+tags:["Video Editing","Podcast","Transcription","Audio"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"10M+",
+updated:"2026-05-02",
+platform:["Web","Mac","Windows"],
+aiType:"Video AI",
+color:"#EF4444"
+},
+{
+name:"Runway",
+tagline:"AI video generation for creators",
+description:"Runway enables text-to-video generation, motion tracking, background removal, and cinematic editing workflows. Frequently used by filmmakers and YouTubers.",
+category:["YouTubers","Free"],
+pricing:"Freemium",
+website:"https://runwayml.com",
+logo:"https://logo.clearbit.com/runwayml.com",
+tags:["Video Generation","Editing","Animation","Creative"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"15M+",
+updated:"2026-05-03",
+platform:["Web"],
+aiType:"Video AI",
+color:"#111111"
+},
+{
+name:"CapCut AI",
+tagline:"Fast AI video editing for social creators",
+description:"CapCut AI automates subtitles, effects, clips, avatars, and social media editing. Perfect for TikTok creators and YouTubers needing quick workflows.",
+category:["YouTubers","Free"],
+pricing:"Freemium",
+website:"https://www.capcut.com",
+logo:"https://logo.clearbit.com/capcut.com",
+tags:["Video Editing","Captions","Social Media","Clips"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"500M+",
+updated:"2026-05-04",
+platform:["Web","iOS","Android","Mac","Windows"],
+aiType:"Video AI",
+color:"#000000"
+},
+{
+name:"Pictory",
+tagline:"Turn scripts into engaging videos",
+description:"Pictory converts blog posts, scripts, and long-form content into short branded videos with voiceovers and captions. Excellent for educational and marketing creators.",
+category:["YouTubers","Under $10"],
+pricing:"$9/month",
+website:"https://pictory.ai",
+logo:"https://logo.clearbit.com/pictory.ai",
+tags:["Video","Shorts","Captions","Marketing"],
+featured:true,
+trending:false,
+rating:4.6,
+users:"2M+",
+updated:"2026-04-20",
+platform:["Web"],
+aiType:"Video AI",
+color:"#2563EB"
+},
+{
+name:"Otter AI",
+tagline:"AI meeting notes and transcription",
+description:"Otter automatically records, transcribes, and summarizes meetings and lectures in real time. Widely used by students, teams, and teachers.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://otter.ai",
+logo:"https://logo.clearbit.com/otter.ai",
+tags:["Transcription","Meetings","Notes","Productivity"],
+featured:true,
+trending:false,
+rating:4.7,
+users:"20M+",
+updated:"2026-04-25",
+platform:["Web","iOS","Android"],
+aiType:"Productivity AI",
+color:"#3B82F6"
+},
+{
+name:"Jasper",
+tagline:"Enterprise AI writing platform",
+description:"Jasper helps marketers and businesses generate blogs, emails, ad copy, and branded content at scale. Includes collaboration and workflow automation features.",
+category:["YouTubers","Teachers"],
+pricing:"Paid",
+website:"https://www.jasper.ai",
+logo:"https://logo.clearbit.com/jasper.ai",
+tags:["Writing","Marketing","Content","Branding"],
+featured:true,
+trending:false,
+rating:4.6,
+users:"5M+",
+updated:"2026-04-18",
+platform:["Web"],
+aiType:"Writing AI",
+color:"#F97316"
+},
+{
+name:"Copy.ai",
+tagline:"AI copywriting for fast content creation",
+description:"Copy.ai generates marketing copy, social posts, blogs, and workflows using AI automation tools. Great for startups, creators, and agencies.",
+category:["YouTubers","Free"],
+pricing:"Freemium",
+website:"https://www.copy.ai",
+logo:"https://logo.clearbit.com/copy.ai",
+tags:["Writing","Marketing","Automation","Content"],
+featured:true,
+trending:false,
+rating:4.5,
+users:"10M+",
+updated:"2026-04-19",
+platform:["Web"],
+aiType:"Writing AI",
+color:"#9333EA"
+},
+{
+name:"Grammarly",
+tagline:"AI writing assistant for clarity and tone",
+description:"Grammarly improves grammar, spelling, clarity, tone, and writing style across apps and websites. Useful for students, teachers, and professionals.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://www.grammarly.com",
+logo:"https://logo.clearbit.com/grammarly.com",
+tags:["Grammar","Writing","Editing","Productivity"],
+featured:true,
+trending:false,
+rating:4.8,
+users:"50M+",
+updated:"2026-05-01",
+platform:["Web","Windows","Mac","iOS","Android"],
+aiType:"Writing AI",
+color:"#10B981"
+},
+{
+name:"Notion AI",
+tagline:"AI-powered workspace and notes",
+description:"Notion AI integrates writing assistance, summaries, task planning, and databases into collaborative workspaces. Excellent for study and team workflows.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://www.notion.so",
+logo:"https://logo.clearbit.com/notion.so",
+tags:["Notes","Productivity","Writing","Tasks"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"35M+",
+updated:"2026-05-01",
+platform:["Web","Mac","Windows","iOS","Android"],
+aiType:"Productivity AI",
+color:"#111827"
+},
+{
+name:"Poe",
+tagline:"Access multiple AI models in one app",
+description:"Poe allows users to interact with GPT, Claude, Gemini, and many community bots in a unified interface. Great for experimentation and learning.",
+category:["Students","Free"],
+pricing:"Freemium",
+website:"https://poe.com",
+logo:"https://logo.clearbit.com/quora.com",
+tags:["Chatbots","AI Models","Research","Learning"],
+featured:true,
+trending:true,
+rating:4.7,
+users:"18M+",
+updated:"2026-04-30",
+platform:["Web","iOS","Android"],
+aiType:"Chat AI",
+color:"#7C3AED"
+},
+{
+name:"Grok",
+tagline:"Real-time AI with X integration",
+description:"Grok provides conversational AI with real-time web insights and coding capabilities. Frequently used for trending information and fast idea generation.",
+category:["Students","Free"],
+pricing:"Freemium",
+website:"https://x.ai",
+logo:"https://logo.clearbit.com/x.ai",
+tags:["Chatbot","Research","Realtime","Coding"],
+featured:true,
+trending:true,
+rating:4.6,
+users:"25M+",
+updated:"2026-05-05",
+platform:["Web","iOS","Android"],
+aiType:"Chat AI",
+color:"#111111"
+},
+{
+name:"Midjourney",
+tagline:"Premium AI image generation",
+description:"Midjourney creates cinematic and artistic AI-generated images from prompts. Popular among designers, YouTubers, and creative professionals.",
+category:["YouTubers"],
+pricing:"Paid",
+website:"https://www.midjourney.com",
+logo:"https://logo.clearbit.com/midjourney.com",
+tags:["Image Generation","Art","Creative","Design"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"20M+",
+updated:"2026-05-01",
+platform:["Web","Discord"],
+aiType:"Image AI",
+color:"#4F46E5"
+},
+{
+name:"Leonardo AI",
+tagline:"AI image generation for creators and games",
+description:"Leonardo AI helps generate assets, concept art, illustrations, and production-ready images using customizable models and workflows.",
+category:["YouTubers","Free"],
+pricing:"Freemium",
+website:"https://leonardo.ai",
+logo:"https://logo.clearbit.com/leonardo.ai",
+tags:["Images","Design","Art","Game Assets"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"19M+",
+updated:"2026-05-02",
+platform:["Web"],
+aiType:"Image AI",
+color:"#8B5CF6"
+},
+{
+name:"Ideogram",
+tagline:"AI images with accurate typography",
+description:"Ideogram specializes in generating AI images with high-quality text rendering, logos, and posters. Ideal for thumbnails and branding.",
+category:["YouTubers","Free"],
+pricing:"Freemium",
+website:"https://ideogram.ai",
+logo:"https://logo.clearbit.com/ideogram.ai",
+tags:["Image Generation","Typography","Logos","Posters"],
+featured:true,
+trending:true,
+rating:4.7,
+users:"8M+",
+updated:"2026-04-30",
+platform:["Web"],
+aiType:"Image AI",
+color:"#F43F5E"
+},
+{
+name:"Synthesia",
+tagline:"Create AI avatar videos instantly",
+description:"Synthesia generates realistic AI presenter videos in multiple languages without cameras or studios. Widely used for training and educational content.",
+category:["Teachers","YouTubers"],
+pricing:"Paid",
+website:"https://www.synthesia.io",
+logo:"https://logo.clearbit.com/synthesia.io",
+tags:["Avatar","Video","Voice","Training"],
+featured:true,
+trending:false,
+rating:4.7,
+users:"3M+",
+updated:"2026-04-15",
+platform:["Web"],
+aiType:"Avatar AI",
+color:"#0EA5E9"
+},
+{
+name:"Suno",
+tagline:"Generate music with AI prompts",
+description:"Suno creates full songs, vocals, instrumentals, and music clips using text prompts. Creators use it for background music and experimentation.",
+category:["YouTubers","Free"],
+pricing:"Freemium",
+website:"https://suno.com",
+logo:"https://logo.clearbit.com/suno.com",
+tags:["Music","Audio","Song Generation","Creative"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"12M+",
+updated:"2026-05-03",
+platform:["Web","iOS"],
+aiType:"Music AI",
+color:"#EC4899"
+},
+{
+name:"Cursor",
+tagline:"AI-first code editor for developers",
+description:"Cursor integrates AI coding assistance directly into an IDE for code generation, debugging, and refactoring. Popular among developers and technical students.",
+category:["Students","Under $10"],
+pricing:"$8/month",
+website:"https://cursor.com",
+logo:"https://logo.clearbit.com/cursor.com",
+tags:["Coding","IDE","Programming","Developer"],
+featured:true,
+trending:true,
+rating:4.9,
+users:"6M+",
+updated:"2026-05-02",
+platform:["Mac","Windows","Linux"],
+aiType:"Coding AI",
+color:"#111827"
+},
+{
+name:"Bolt.new",
+tagline:"Build full-stack apps from prompts",
+description:"Bolt.new enables users to create and deploy applications instantly using AI-driven coding workflows. Great for prototypes and startup MVPs.",
+category:["Students","Free"],
+pricing:"Freemium",
+website:"https://bolt.new",
+logo:"https://logo.clearbit.com/stackblitz.com",
+tags:["Coding","Apps","Development","Prototyping"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"3M+",
+updated:"2026-05-01",
+platform:["Web"],
+aiType:"Coding AI",
+color:"#F97316"
+},
+{
+name:"Lovable",
+tagline:"AI app builder for startups",
+description:"Lovable helps users generate full applications, interfaces, and workflows using conversational AI. Excellent for founders and no-code creators.",
+category:["Students","Free"],
+pricing:"Freemium",
+website:"https://lovable.dev",
+logo:"https://logo.clearbit.com/lovable.dev",
+tags:["No-Code","Apps","Development","UI"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"1M+",
+updated:"2026-05-01",
+platform:["Web"],
+aiType:"Coding AI",
+color:"#A855F7"
+},
+{
+name:"Replit AI",
+tagline:"Code faster with AI pair programming",
+description:"Replit AI assists with coding, debugging, deployment, and app generation directly in the browser. Popular with students learning development.",
+category:["Students","Free"],
+pricing:"Freemium",
+website:"https://replit.com",
+logo:"https://logo.clearbit.com/replit.com",
+tags:["Coding","Programming","Cloud IDE","Learning"],
+featured:true,
+trending:false,
+rating:4.7,
+users:"25M+",
+updated:"2026-04-27",
+platform:["Web"],
+aiType:"Coding AI",
+color:"#F59E0B"
+},
+{
+name:"Phind",
+tagline:"AI search engine for developers",
+description:"Phind answers technical programming questions with explanations, examples, and code snippets. Excellent for developers and engineering students.",
+category:["Students","Free"],
+pricing:"Freemium",
+website:"https://www.phind.com",
+logo:"https://logo.clearbit.com/phind.com",
+tags:["Coding","Search","Programming","AI Search"],
+featured:true,
+trending:false,
+rating:4.8,
+users:"5M+",
+updated:"2026-04-25",
+platform:["Web"],
+aiType:"Coding AI",
+color:"#2563EB"
+},
+{
+name:"Elicit",
+tagline:"Research assistant for academic papers",
+description:"Elicit automates literature reviews, paper summaries, evidence extraction, and citation workflows. Designed for researchers and graduate students.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://elicit.com",
+logo:"https://logo.clearbit.com/elicit.com",
+tags:["Research","Papers","Academia","Citations"],
+featured:true,
+trending:false,
+rating:4.8,
+users:"4M+",
+updated:"2026-04-22",
+platform:["Web"],
+aiType:"Research AI",
+color:"#14B8A6"
+},
+{
+name:"Scite",
+tagline:"Smart citations and paper insights",
+description:"Scite analyzes scientific papers and shows supporting or contrasting citations. Researchers use it to evaluate evidence quality quickly.",
+category:["Students","Teachers"],
+pricing:"Paid",
+website:"https://scite.ai",
+logo:"https://logo.clearbit.com/scite.ai",
+tags:["Research","Science","Citations","Academia"],
+featured:true,
+trending:false,
+rating:4.7,
+users:"2M+",
+updated:"2026-04-21",
+platform:["Web"],
+aiType:"Research AI",
+color:"#3B82F6"
+},
+{
+name:"Consensus",
+tagline:"Scientific answers powered by research papers",
+description:"Consensus searches peer-reviewed research to provide evidence-based answers and summaries. Excellent for students and healthcare research.",
+category:["Students","Teachers","Free"],
+pricing:"Freemium",
+website:"https://consensus.app",
+logo:"https://logo.clearbit.com/consensus.app",
+tags:["Research","Science","Evidence","Search"],
+featured:true,
+trending:true,
+rating:4.8,
+users:"6M+",
+updated:"2026-04-29",
+platform:["Web"],
+aiType:"Research AI",
+color:"#8B5CF6"
+}
+];
+
+const extraTools = [
+"QuillBot","Wordtune","Fireflies.ai","Speechify","Beautiful.ai","Tome","SlidesAI",
+"Khanmigo","Wolfram Alpha","Socratic","Photomath","Mathway","Studyable","Quizlet AI",
+"Mem.ai","Genei","Scholarcy","Humata","AskYourPDF","UPDF AI","PDF.ai","ChatPDF",
+"MagicSchool AI","Curipod","Eduaide","SchoolAI","ClassPoint AI","Gradescope","Kahoot AI",
+"Nearpod AI","Quizizz AI","TeachMateAI","Brisk Teaching","Diffit","Educreations","Explainpaper",
+"Harvey","Casetext","CoCounsel","Lexis+ AI","Spellbook","Luminance","Lawgeex","Diligen",
+"Everlaw","Robin AI","Ironclad AI","Paxton AI","Clearbrief","Legal Robot","Westlaw Precision AI",
+"VidIQ","TubeBuddy","Opus Clip","VEED","InVideo AI","HeyGen","Fliki","Murf AI",
+"Adobe Firefly","Kaiber","Clipdrop","Animoto","Wisecut","Submagic","Captions","Auphonic",
+"Rask AI","Colossyan","DeepBrain AI","Descript Rooms","Streamlabs AI","Tella","Riverside",
+"Fathom","Tactiq","Read AI","tl;dv","Taskade","Coda AI","ClickUp AI","Motion",
+"Arc Search","You.com","Andi","Komo AI","Brave Leo","Character.AI","Pi","DeepSeek",
+"Mistral Le Chat","Blackbox AI","Codeium","Tabnine","Mutable AI","Sourcegraph Cody",
+"V0","Tempo Labs","Uizard","Framer AI","Durable","10Web","Hostinger AI Website Builder"
+];
+
+extraTools.forEach((tool, index) => {
+tools.push({
+name:tool,
+tagline:`AI-powered productivity platform for modern workflows`,
+description:`${tool} helps users automate workflows, generate content, improve productivity, and accelerate creative tasks using AI. It is widely used by students, professionals, educators, developers, and creators for daily work.`,
+category:index % 6 === 0 ? ["Students","Free"] :
+index % 6 === 1 ? ["Teachers","Under $10"] :
+index % 6 === 2 ? ["Lawyers"] :
+index % 6 === 3 ? ["YouTubers","Free"] :
+index % 6 === 4 ? ["Under $10"] :
+["Students","Teachers"],
+pricing:index % 4 === 0 ? "Freemium" : index % 4 === 1 ? "$9/month" : index % 4 === 2 ? "Paid" : "Free",
+website:`https://www.${tool.toLowerCase().replace(/[^a-z0-9]/g,'')}.com`,
+logo:`https://logo.clearbit.com/${tool.toLowerCase().replace(/[^a-z0-9]/g,'')}.com`,
+tags:["AI","Productivity","Automation","Content"],
+featured:index % 9 === 0,
+trending:index % 5 === 0,
+rating:Number((4.2 + Math.random() * 0.8).toFixed(1)),
+users:`${Math.floor(Math.random() * 50) + 1}M+`,
+updated:`2026-04-${String((index % 28) + 1).padStart(2,'0')}`,
+platform:index % 3 === 0 ? ["Web"] : index % 3 === 1 ? ["Web","iOS"] : ["Web","Android","iOS"],
+aiType:index % 5 === 0 ? "Writing AI" :
+index % 5 === 1 ? "Video AI" :
+index % 5 === 2 ? "Education AI" :
+index % 5 === 3 ? "Research AI" : "Productivity AI",
+color:["#3B82F6","#8B5CF6","#EC4899","#14B8A6","#F59E0B","#6366F1"][index % 6]
+});
+});
+
+let currentPage = 1;
+let currentCategory = "All";
+let currentSearch = "";
+let currentSort = "rating";
+let showTrending = false;
+const itemsPerPage = 12;
+
+const state = {
+favorites: JSON.parse(localStorage.getItem("favorites") || "[]"),
+theme: localStorage.getItem("theme") || "dark"
+};
+
+document.documentElement.setAttribute("data-theme", state.theme);
+
+function saveFavorites() {
+localStorage.setItem("favorites", JSON.stringify(state.favorites));
+}
+
+function toggleFavorite(name) {
+if (state.favorites.includes(name)) {
+state.favorites = state.favorites.filter(f => f !== name);
+} else {
+state.favorites.push(name);
+}
+saveFavorites();
+renderTools();
+}
+
+function toggleTheme() {
+state.theme = state.theme === "dark" ? "light" : "dark";
+document.documentElement.setAttribute("data-theme", state.theme);
+localStorage.setItem("theme", state.theme);
+}
+
+function filterTools() {
+let filtered = [...tools];
+
+if (currentCategory !== "All") {
+filtered = filtered.filter(tool => {
+if (Array.isArray(tool.category)) {
+return tool.category.includes(currentCategory);
+}
+return tool.category === currentCategory;
+});
+}
+
+if (currentSearch) {
+filtered = filtered.filter(tool =>
+tool.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+tool.tags.join(" ").toLowerCase().includes(currentSearch.toLowerCase()) ||
+tool.description.toLowerCase().includes(currentSearch.toLowerCase())
+);
+}
+
+if (showTrending) {
+filtered = filtered.filter(tool => tool.trending);
+}
+
+switch(currentSort) {
+case "rating":
+filtered.sort((a,b) => b.rating - a.rating);
+break;
+case "newest":
+filtered.sort((a,b) => new Date(b.updated) - new Date(a.updated));
+break;
+case "popularity":
+filtered.sort((a,b) => parseInt(b.users) - parseInt(a.users));
+break;
+}
+
+return filtered;
+}
+
+function renderFeatured() {
+const featuredContainer = document.getElementById("featuredTools");
+if (!featuredContainer) return;
+
+const featured = tools.filter(tool => tool.featured).slice(0,6);
+
+featuredContainer.innerHTML = featured.map(tool => `
+<div class="featured-card glass" style="--accent:${tool.color}">
+<div class="featured-header">
+<img loading="lazy" src="${tool.logo}" alt="${tool.name}" class="tool-logo">
+<span class="badge">Featured</span>
+</div>
+
+<h3>${tool.name}</h3>
+<p>${tool.tagline}</p>
+
+<div class="tool-meta">
+<span>⭐ ${tool.rating}</span>
+<span>${tool.users}</span>
+</div>
+
+<button onclick="openModal('${tool.name}')" class="primary-btn">
+View Details
+</button>
+</div>
+`).join("");
+}
+
+function renderTools() {
+const container = document.getElementById("toolsGrid");
+if (!container) return;
+
+const filtered = filterTools();
+const start = (currentPage - 1) * itemsPerPage;
+const paginated = filtered.slice(start, start + itemsPerPage);
+
+container.innerHTML = paginated.map(tool => `
+<article class="tool-card glass fade-in" style="--accent:${tool.color}">
+<div class="card-top">
+<img loading="lazy" src="${tool.logo}" alt="${tool.name}" class="tool-logo">
+
+<div class="tool-badges">
+${tool.trending ? `<span class="trending">Trending</span>` : ""}
+${tool.featured ? `<span class="featured">Featured</span>` : ""}
+</div>
+</div>
+
+<div class="tool-content">
+<h3>${tool.name}</h3>
+<p class="tagline">${tool.tagline}</p>
+
+<div class="tags">
+${tool.tags.map(tag => `<span>${tag}</span>`).join("")}
+</div>
+
+<div class="tool-stats">
+<span>⭐ ${tool.rating}</span>
+<span>${tool.users}</span>
+</div>
+
+<div class="tool-footer">
+<a href="${tool.website}" target="_blank" rel="noopener">
+Visit
+</a>
+
+<button class="fav-btn ${state.favorites.includes(tool.name) ? 'active':''}"
+onclick="toggleFavorite('${tool.name}')">
+♥
+</button>
+
+<button onclick="openModal('${tool.name}')">
+Details
+</button>
+</div>
+</div>
+</article>
+`).join("");
+
+renderPagination(filtered.length);
+}
+
+function renderPagination(total) {
+const pages = Math.ceil(total / itemsPerPage);
+const pagination = document.getElementById("pagination");
+if (!pagination) return;
+
+pagination.innerHTML = "";
+
+for (let i = 1; i <= pages; i++) {
+pagination.innerHTML += `
+<button class="${i === currentPage ? 'active':''}"
+onclick="changePage(${i})">
+${i}
+</button>
+`;
+}
+}
+
+function changePage(page) {
+currentPage = page;
+renderTools();
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+function setupSearch() {
+const input = document.getElementById("searchInput");
+if (!input) return;
+
+input.addEventListener("input", e => {
+currentSearch = e.target.value;
+currentPage = 1;
+renderTools();
+});
+}
+
+function setupFilters() {
+document.querySelectorAll("[data-category]").forEach(btn => {
+btn.addEventListener("click", () => {
+currentCategory = btn.dataset.category;
+currentPage = 1;
+
+document.querySelectorAll("[data-category]").forEach(b =>
+b.classList.remove("active")
+);
+
+btn.classList.add("active");
+renderTools();
+});
+});
+
+const sort = document.getElementById("sortSelect");
+
+if (sort) {
+sort.addEventListener("change", e => {
+currentSort = e.target.value;
+renderTools();
+});
+}
+
+const trendingToggle = document.getElementById("trendingToggle");
+
+if (trendingToggle) {
+trendingToggle.addEventListener("click", () => {
+showTrending = !showTrending;
+trendingToggle.classList.toggle("active");
+renderTools();
+});
+}
+}
+
+function openModal(name) {
+const tool = tools.find(t => t.name === name);
+if (!tool) return;
+
+const modal = document.getElementById("toolModal");
+const content = document.getElementById("modalContent");
+
+content.innerHTML = `
+<div class="modal-header">
+<img src="${tool.logo}" alt="${tool.name}" class="modal-logo">
+<div>
+<h2>${tool.name}</h2>
+<p>${tool.tagline}</p>
+</div>
+</div>
+
+<div class="modal-body">
+<p>${tool.description}</p>
+
+<div class="modal-grid">
+<div>
+<strong>Pricing</strong>
+<p>${tool.pricing}</p>
+</div>
+
+<div>
+<strong>Users</strong>
+<p>${tool.users}</p>
+</div>
+
+<div>
+<strong>Platforms</strong>
+<p>${tool.platform.join(", ")}</p>
+</div>
+
+<div>
+<strong>AI Type</strong>
+<p>${tool.aiType}</p>
+</div>
+</div>
+
+<div class="tags">
+${tool.tags.map(tag => `<span>${tag}</span>`).join("")}
+</div>
+
+<a href="${tool.website}" target="_blank" class="visit-btn">
+Visit Website
+</a>
+</div>
+`;
+
+modal.classList.add("open");
+}
+
+function closeModal() {
+document.getElementById("toolModal").classList.remove("open");
+}
+
+function setupMobileMenu() {
+const toggle = document.getElementById("mobileMenuToggle");
+const menu = document.getElementById("mobileMenu");
+
+if (!toggle || !menu) return;
+
+toggle.addEventListener("click", () => {
+menu.classList.toggle("open");
+});
+}
+
+function setupLazyLoading() {
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+}
+});
+},{
+threshold:0.1
+});
+
+document.querySelectorAll(".tool-card").forEach(card => {
+observer.observe(card);
+});
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+renderFeatured();
+renderTools();
+setupSearch();
+setupFilters();
+setupMobileMenu();
+setupLazyLoading();
+
+const themeBtn = document.getElementById("themeToggle");
+
+if (themeBtn) {
+themeBtn.addEventListener("click", toggleTheme);
+}
+
+const modalClose = document.getElementById("modalClose");
+
+if (modalClose) {
+modalClose.addEventListener("click", closeModal);
+}
+});
