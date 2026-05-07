@@ -473,7 +473,7 @@ const tools = [
 {
     name:"ChatGPT",
     description:"Advanced AI assistant with GPT-5.4 capabilities.",
-    details:"The most popular AI assistant globally. Features include GPT-5.4 model, 1M token context window, multimodal input/output (text, images, audio, video), web browsing, code execution, file analysis, and advanced reasoning. Available in Free (GPT-4o limited), Plus ($20/month), and Pro ($200/month with unlimited reasoning) tiers.",
+    details:"The most popular AI assistant globally. Features include GPT-5.4 model, 1M token context window, multimodal input/output (text, images, audio, video), web browsing, code execution, file analysis, and real-time collaboration.",
     category:["Students","Free","Developers"],
     pricing:"Freemium",
     website:"https://chatgpt.com",
@@ -486,7 +486,7 @@ const tools = [
 {
     name:"Claude",
     description:"Sophisticated AI for reasoning, coding, and analysis.",
-    details:"Anthropic's advanced AI model (Opus 4.7). Offers 1M token context, adaptive thinking mode, exceptional at complex reasoning and long documents. Features nuanced judgment, superior code analysis, and privacy-first design. Free tier available, Pro $20/month, Max $100-200/month.",
+    details:"Anthropic's advanced AI model (Opus 4.7). Offers 1M token context, adaptive thinking mode, exceptional at complex reasoning and long documents. Features nuanced judgment, superior code analysis.",
     category:["Students","Developers","Free"],
     pricing:"Freemium",
     website:"https://claude.ai",
@@ -499,7 +499,7 @@ const tools = [
 {
     name:"Google Gemini",
     description:"Google's AI model integrated with Google Workspace.",
-    details:"Gemini 3.1 Pro - Deeply integrated with Gmail, Docs, Sheets, Photos. Excels at research, personal assistant tasks, and workflow automation. Advanced benchmarks, 'Personal Intelligence' features. Free tier (Gemini 3.1 Flash) with fast response, Advanced $19.99/month.",
+    details:"Gemini 3.1 Pro - Deeply integrated with Gmail, Docs, Sheets, Photos. Excels at research, personal assistant tasks, and workflow automation. Advanced benchmarks, 'Personal Intelligence' features.",
     category:["Students","Teachers","Free"],
     pricing:"Freemium",
     website:"https://gemini.google.com",
@@ -512,7 +512,7 @@ const tools = [
 {
     name:"Perplexity",
     description:"AI search engine with verified sources and citations.",
-    details:"Next-generation search combining web browsing with AI reasoning. Real-time information, cited sources, image search, collections. Freemium model with Pro tier for priority processing and longer answers.",
+    details:"Next-generation search combining web browsing with AI reasoning. Real-time information, cited sources, image search, collections. Freemium model with Pro tier for priority processing.",
     category:["Students","Free"],
     pricing:"Freemium",
     website:"https://www.perplexity.ai",
@@ -525,7 +525,7 @@ const tools = [
 {
     name:"GitHub Copilot",
     description:"AI-powered code completion and generation.",
-    details:"Integrated into VS Code, Visual Studio, and Jetbrains IDEs. Provides code autocomplete, test generation, natural language to code conversion. Features Copilot X for chat-based coding. Free for students/open-source, $10/month individual, $19/month business.",
+    details:"Integrated into VS Code, Visual Studio, and Jetbrains IDEs. Provides code autocomplete, test generation, natural language to code conversion. Features Copilot X for chat-based coding.",
     category:["Developers","Students"],
     pricing:"Freemium",
     website:"https://github.com/features/copilot",
@@ -538,7 +538,7 @@ const tools = [
 {
     name:"Cursor",
     description:"AI-native IDE with agents for multi-task coding.",
-    details:"Advanced coding IDE featuring Agents Window for parallel coding tasks. Refactor, debug, and build features with AI assistance. Superior to traditional IDEs for complex software projects. Freemium with Pro at $30/month.",
+    details:"Advanced coding IDE featuring Agents Window for parallel coding tasks. Refactor, debug, and build features with AI assistance. Superior to traditional IDEs for complex software projects.",
     category:["Developers","Under $10"],
     pricing:"$30/month",
     website:"https://cursor.com",
@@ -551,7 +551,7 @@ const tools = [
 {
     name:"Midjourney",
     description:"Leading AI image generation platform.",
-    details:"Text-to-image generation with customizable art styles, high resolution output, and community features. Subscription-based (no free tier). Plans: Basic $10/month, Standard $30/month, Pro $60/month, unlimited generation at higher tiers.",
+    details:"Text-to-image generation with customizable art styles, high resolution output, and community features. Subscription-based (no free tier). Plans: Basic $10/month, Standard $30/month, Pro tier available.",
     category:["YouTubers"],
     pricing:"Paid",
     website:"https://www.midjourney.com",
@@ -564,7 +564,7 @@ const tools = [
 {
     name:"DALL-E 3",
     description:"OpenAI's advanced image generation.",
-    details:"Integrated directly into ChatGPT Plus/Pro. Generates realistic, detailed images from descriptions. Can also edit and create variations. Access through ChatGPT subscription or standalone credits.",
+    details:"Integrated directly into ChatGPT Plus/Pro. Generates realistic, detailed images from descriptions. Can also edit and create variations. Access through ChatGPT subscription or standalone.",
     category:["YouTubers","Free"],
     pricing:"Freemium",
     website:"https://openai.com/dall-e-3",
@@ -590,7 +590,7 @@ const tools = [
 {
     name:"Canva AI",
     description:"AI-powered design suite for creators.",
-    details:"Complete design platform with AI features for social media, presentations, and print. Magic Write for text generation, Magic Design for layouts. Freemium with Canva Pro ($119/year) for unlimited design access.",
+    details:"Complete design platform with AI features for social media, presentations, and print. Magic Write for text generation, Magic Design for layouts. Freemium with Canva Pro ($119/year).",
     category:["Teachers","YouTubers"],
     pricing:"Freemium",
     website:"https://www.canva.com",
@@ -629,7 +629,7 @@ const tools = [
 {
     name:"HeyGen",
     description:"AI avatar video generation from scripts.",
-    details:"Create realistic avatar videos from text scripts. Supports multilingual voiceover with lipsyncing. Perfect for presentations, tutorials, and marketing content. Subscription-based with various tiers.",
+    details:"Create realistic avatar videos from text scripts. Supports multilingual voiceover with lipsyncing. Perfect for presentations, tutorials, and marketing content. Subscription-based.",
     category:["YouTubers"],
     pricing:"Paid",
     website:"https://www.heygen.com",
@@ -998,365 +998,437 @@ const tools = [
     pricing:"Freemium",
     website:"https://fireflies.ai",
     tags:["Meetings"],
-    rating:4.5,
-    users:9,
-    updated:"2026-03-25",
-    trending:false
-},
-{
-    name:"DeepL Write",
-    description:"AI writing assistant for multiple languages.",
-    details:"Grammar and clarity improvement for professional writing. Multiple language support. Free and premium tiers.",
-    category:["Students","Free"],
-    pricing:"Free",
-    website:"https://www.deepl.com/write",
-    tags:["Writing"],
-    rating:4.6,
-    users:18,
-    updated:"2026-03-26",
-    trending:false
-},
-{
-    name:"Pictory",
-    description:"Convert text and scripts into videos.",
-    details:"Turn blog posts, articles, or scripts into professional videos. AI voiceover and avatars. Paid plans available.",
-    category:["YouTubers"],
-    pricing:"Paid",
-    website:"https://pictory.ai",
-    tags:["Video"],
-    rating:4.6,
-    users:9,
-    updated:"2026-04-04",
-    trending:false
-},
-{
-    name:"InVideo AI",
-    description:"AI video creation platform.",
-    details:"Create videos from text with AI narration and visuals. Templates for various content types. Freemium.",
-    category:["YouTubers"],
-    pricing:"Freemium",
-    website:"https://invideo.io",
-    tags:["Video"],
-    rating:4.6,
-    users:30,
-    updated:"2026-04-02",
-    trending:false
-},
-{
-    name:"VEED",
-    description:"AI video editing with transcript editing.",
-    details:"Edit videos by editing transcripts. Auto-caption generation, background removal. Freemium.",
-    category:["YouTubers"],
-    pricing:"Freemium",
-    website:"https://www.veed.io",
-    tags:["Video"],
-    rating:4.5,
-    users:28,
-    updated:"2026-04-01",
-    trending:false
-},
-{
-    name:"Adobe Firefly",
-    description:"Adobe's generative AI creative suite.",
-    details:"AI-powered image generation within Creative Cloud. Text-to-image, generative fill, expand. Included with Creative Cloud subscriptions.",
-    category:["YouTubers"],
-    pricing:"Freemium",
-    website:"https://firefly.adobe.com",
-    tags:["Design"],
-    rating:4.7,
-    users:60,
-    updated:"2026-03-30",
-    trending:false
-},
-{
-    name:"Ideogram",
-    description:"AI image generation with text rendering.",
-    details:"Specialized in generating images with text overlays. Clean, readable typography in AI images. Freemium.",
-    category:["YouTubers"],
-    pricing:"Freemium",
-    website:"https://ideogram.ai",
-    tags:["Image"],
-    rating:4.7,
-    users:15,
-    updated:"2026-03-29",
-    trending:true
-},
-{
-    name:"Udio",
-    description:"Generate AI music and songs.",
-    details:"Create original songs and instrumentals from descriptions. Multiple music genres. Freemium model.",
-    category:["YouTubers"],
-    pricing:"Freemium",
-    website:"https://www.udio.com",
-    tags:["Music"],
-    rating:4.7,
-    users:13,
-    updated:"2026-03-27",
-    trending:true
-},
-{
-    name:"Opus Clip",
-    description:"AI-powered short-form content creation.",
-    details:"Automatically extract the best moments from long videos and create viral clips. Perfect for TikTok/YouTube Shorts.",
-    category:["YouTubers"],
-    pricing:"Paid",
-    website:"https://www.opusclip.com",
-    tags:["Video","Editing"],
     rating:4.7,
     users:16,
-    updated:"2026-05-02",
-    trending:true
-},
-{
-    name:"Scite",
-    description:"Smart citation and research tool.",
-    details:"Citation tracking and literature review tool for researchers. Track references and smart citations. Paid subscription.",
-    category:["Students"],
-    pricing:"Paid",
-    website:"https://scite.ai",
-    tags:["Research"],
-    rating:4.6,
-    users:5,
-    updated:"2026-04-15",
-    trending:false
-},
-{
-    name:"DoNotPay",
-    description:"AI legal assistant for consumers.",
-    details:"AI helps with legal documents, consumer rights, and compliance. Chatbot interface for legal guidance. Subscription-based.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://donotpay.com",
-    tags:["Legal"],
-    rating:4.4,
-    users:8,
-    updated:"2026-03-24",
-    trending:false
-},
-{
-    name:"CoCounsel",
-    description:"Legal research AI powered by Thomson Reuters.",
-    details:"Advanced legal research with Westlaw content. Contract analysis, discovery, legal writing assistance. Enterprise focus. $225+/month.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://legal.thomsonreuters.com",
-    tags:["Legal","Research"],
-    rating:4.7,
-    users:4,
-    updated:"2026-03-23",
-    trending:false
-},
-{
-    name:"Spellbook",
-    description:"Contract drafting and review AI.",
-    details:"Integrates into Microsoft Word for contract review and drafting. AI-powered redlining and playbook management. ~$179/user/month.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://www.spellbook.legal",
-    tags:["Legal","Contracts"],
-    rating:4.7,
-    users:6,
-    updated:"2026-04-15",
-    trending:false
-},
-{
-    name:"LegesGPT",
-    description:"All-in-one legal AI suite.",
-    details:"Comprehensive legal research, document review, and template generation. Available in 38+ countries. Affordable at ~$14/month for solo practitioners.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://www.legesgpt.com",
-    tags:["Legal","Research"],
-    rating:4.6,
-    users:10,
-    updated:"2026-04-20",
-    trending:false
-},
-{
-    name:"Harvey AI",
-    description:"Enterprise legal AI for large law firms.",
-    details:"Trusted by AmLaw 100 firms. General-purpose legal AI for complex legal matters, research, and document analysis. ~$1000+/user/month.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://www.harvey.ai",
-    tags:["Legal"],
-    rating:4.7,
-    users:5,
-    updated:"2026-04-18",
-    trending:false
-},
-{
-    name:"EvenUp",
-    description:"Legal demand letter and case management.",
-    details:"AI generates demand letters and medical chronologies for personal injury cases. Increases settlement rates. Integration with legal workflows.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://www.evenup.com",
-    tags:["Legal"],
-    rating:4.6,
-    users:7,
-    updated:"2026-04-22",
-    trending:false
-},
-{
-    name:"Clio Manage AI",
-    description:"Practice management with built-in AI.",
-    details:"Complete practice management platform enhanced with AI for billing, matter summaries, drafting, and strategic insights. $49-149/user/month.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://www.clio.com",
-    tags:["Legal","Management"],
-    rating:4.6,
-    users:8,
-    updated:"2026-04-25",
-    trending:false
-},
-{
-    name:"DataCamp AI Tutor",
-    description:"AI-powered personalized learning platform.",
-    details:"Adaptive learning with AI tutoring. Dynamically created lessons based on your knowledge level. Perfect for data science and coding skills.",
-    category:["Students"],
-    pricing:"Paid",
-    website:"https://www.datacamp.com",
-    tags:["Learning","Data Science"],
-    rating:4.7,
-    users:22,
-    updated:"2026-04-28",
-    trending:false
-},
-{
-    name:"Microsoft Copilot Pro",
-    description:"Copilot integration across Microsoft 365.",
-    details:"Works within Word, Excel, Outlook, Teams, and more. Multiple AI model support. $20/month, enterprise plans available.",
-    category:["Teachers","Developers"],
-    pricing:"Paid",
-    website:"https://www.microsoft.com/copilot",
-    tags:["Productivity"],
-    rating:4.6,
-    users:80,
-    updated:"2026-05-01",
+    updated:"2026-04-17",
     trending:false
 },
 {
     name:"Runway Gen-4",
-    description:"Advanced video generation and editing.",
-    details:"High-fidelity video generation with motion control. Professional-grade video creation tool. Subscription-based.",
-    category:["YouTubers"],
-    pricing:"Paid",
-    website:"https://runwayml.com",
+    description:"Advanced generative video creation platform.",
+    details:"Generate 4K video from text prompts. Multi-frame diffusion with advanced effects. Industry standard for content creators. Free tier with limited exports.",
+    category:["YouTubers","Free"],
+    pricing:"Freemium",
+    website:"https://www.runway.ml",
+    tags:["Video","Generation"],
+    rating:4.8,
+    users:35,
+    updated:"2026-05-03",
+    trending:true
+},
+{
+    name:"Google Veo 3",
+    description:"Google's free video generation model.",
+    details:"High-quality video generation from text. Integrated into Google AI Studio. Completely free without login. Excellent for quick prototyping.",
+    category:["YouTubers","Free"],
+    pricing:"Free",
+    website:"https://deepmind.google/veo",
     tags:["Video"],
     rating:4.8,
+    users:28,
+    updated:"2026-05-02",
+    trending:true
+},
+{
+    name:"Kling AI",
+    description:"Chinese AI video generation platform.",
+    details:"Emerging competitor to Sora. High-quality video generation with realistic physics. Free beta access. Supports multi-language prompts.",
+    category:["YouTubers","Free"],
+    pricing:"Free",
+    website:"https://kling.kuaishou.com",
+    tags:["Video"],
+    rating:4.7,
     users:18,
+    updated:"2026-04-28",
+    trending:true
+},
+{
+    name:"Pika 2.0",
+    description:"AI video generator with real-time editing.",
+    details:"Create videos from text or images. Real-time preview and iteration. Supports 3D object generation. Freemium model.",
+    category:["YouTubers","Free"],
+    pricing:"Freemium",
+    website:"https://pika.art",
+    tags:["Video","3D"],
+    rating:4.7,
+    users:22,
+    updated:"2026-04-26",
+    trending:true
+},
+{
+    name:"Stable Diffusion 3.5",
+    description:"Open-source image generation model.",
+    details:"Run locally for privacy and custom fine-tuning. No usage limits. ComfyUI integration for advanced workflows. Community-driven.",
+    category:["Developers","Free"],
+    pricing:"Free",
+    website:"https://stabilityai.com",
+    tags:["Image","Open Source"],
+    rating:4.8,
+    users:45,
+    updated:"2026-05-01",
+    trending:false
+},
+{
+    name:"Flux 2",
+    description:"Text-rendering and photorealistic image generation.",
+    details:"Excellent at rendering text in images. Open-source and free to use. Fast generation times. Ideal for design mockups.",
+    category:["Developers","Free"],
+    pricing:"Free",
+    website:"https://blackforestlabs.ai",
+    tags:["Image","Text Rendering"],
+    rating:4.8,
+    users:32,
     updated:"2026-04-30",
     trending:true
 },
 {
-    name:"Superlegal",
-    description:"Contract review with lawyer oversight.",
-    details:"AI contract analysis with attorney-in-the-loop review. Safe for high-stakes contracts. Premium pricing for legal review services.",
-    category:["Lawyers"],
+    name:"Adobe Firefly 3",
+    description:"Enterprise-grade image and video generation.",
+    details:"Integrated into Creative Cloud. Commercially safe for business use. Generative fill and extend. Consistent image generation across projects.",
+    category:["YouTubers","Teachers"],
     pricing:"Paid",
-    website:"https://www.superlegal.com",
-    tags:["Legal","Contracts"],
-    rating:4.5,
-    users:4,
-    updated:"2026-04-12",
-    trending:false
-},
-{
-    name:"Lexis+ AI",
-    description:"Legal research powered by LexisNexis.",
-    details:"Citation-backed, error-checked legal research. Live Shepard's validation. Enterprise legal research standard.",
-    category:["Lawyers"],
-    pricing:"Paid",
-    website:"https://www.lexisnexis.com",
-    tags:["Legal","Research"],
-    rating:4.8,
-    users:5,
+    website:"https://www.adobe.com/firefly",
+    tags:["Image","Video","Design"],
+    rating:4.7,
+    users:24,
     updated:"2026-04-25",
     trending:false
 },
 {
-    name:"Everlaw AI",
-    description:"AI for e-discovery and document review.",
-    details:"Accelerates document review in litigation. Handles high-volume discovery efficiently. Used by large law firms.",
+    name:"Zapier",
+    description:"Cross-app automation platform.",
+    details:"Connect 5000+ apps. No-code workflow builder with AI Agents. Automate repetitive tasks. Starting at free tier, scales with usage.",
+    category:["Developers","Free"],
+    pricing:"Freemium",
+    website:"https://zapier.com",
+    tags:["Automation","Productivity"],
+    rating:4.8,
+    users:120,
+    updated:"2026-05-01",
+    trending:false
+},
+{
+    name:"Make.com",
+    description:"Visual workflow automation platform.",
+    details:"1500+ app integrations with complex logic. Drag-and-drop interface. More powerful than Zapier for advanced workflows. Free tier available.",
+    category:["Developers","Free"],
+    pricing:"Freemium",
+    website:"https://make.com",
+    tags:["Automation","Workflow"],
+    rating:4.7,
+    users:65,
+    updated:"2026-04-29",
+    trending:false
+},
+{
+    name:"n8n",
+    description:"Open-source workflow automation.",
+    details:"Self-hosted or cloud option. Native AI integrations with OpenAI, Gemini, Claude. Custom code support. Full control over data.",
+    category:["Developers"],
+    pricing:"Freemium",
+    website:"https://n8n.io",
+    tags:["Automation","Open Source"],
+    rating:4.7,
+    users:28,
+    updated:"2026-04-27",
+    trending:false
+},
+{
+    name:"Asana AI",
+    description:"Project management with AI assistance.",
+    details:"AI-powered task assignment and prioritization. Progress predictions. Automated status updates. Enterprise team collaboration.",
+    category:["Teachers","Developers"],
+    pricing:"Paid",
+    website:"https://asana.com",
+    tags:["Project Management"],
+    rating:4.6,
+    users:40,
+    updated:"2026-04-24",
+    trending:false
+},
+{
+    name:"Harvey AI",
+    description:"AI legal assistant for lawyers.",
+    details:"AI trained on legal documents and case law. Contract analysis, legal research, document drafting. Enterprise security.",
     category:["Lawyers"],
     pricing:"Paid",
-    website:"https://www.everlaw.com",
-    tags:["Legal","Discovery"],
-    rating:4.6,
-    users:3,
+    website:"https://www.harvey.ai",
+    tags:["Legal","Business"],
+    rating:4.8,
+    users:15,
+    updated:"2026-05-02",
+    trending:true
+},
+{
+    name:"LexisNexis AI",
+    description:"AI-powered legal research platform.",
+    details:"Advanced legal database with AI search. Case law analysis, citation tracking. Professional subscription required.",
+    category:["Lawyers"],
+    pricing:"Paid",
+    website:"https://www.lexisnexis.com",
+    tags:["Legal","Research"],
+    rating:4.7,
+    users:12,
     updated:"2026-04-20",
     trending:false
+},
+{
+    name:"Cognition AI",
+    description:"Autonomous AI coding agent.",
+    details:"Solves complex coding problems independently. Can write entire projects. Real-time learning from feedback. Enterprise tool.",
+    category:["Developers"],
+    pricing:"Paid",
+    website:"https://www.cognition.ai",
+    tags:["Coding","Agents"],
+    rating:4.8,
+    users:18,
+    updated:"2026-05-03",
+    trending:true
+},
+{
+    name:"Sourcegraph Cody",
+    description:"Enterprise codebase AI assistant.",
+    details:"Search entire codebase with AI. Code completion for large projects. Professional development workflows. Enterprise pricing.",
+    category:["Developers"],
+    pricing:"Paid",
+    website:"https://sourcegraph.com/cody",
+    tags:["Coding","Enterprise"],
+    rating:4.7,
+    users:22,
+    updated:"2026-04-21",
+    trending:false
+},
+{
+    name:"Gamma",
+    description:"AI presentation builder.",
+    details:"Convert notes and outlines into beautiful presentations. No design skills needed. Templates and customization options.",
+    category:["Teachers"],
+    pricing:"Freemium",
+    website:"https://gamma.app",
+    tags:["Presentations"],
+    rating:4.6,
+    users:10,
+    updated:"2026-04-19",
+    trending:false
+},
+{
+    name:"Ambience Healthcare AI",
+    description:"AI scribe for medical professionals.",
+    details:"Real-time transcription of patient visits. Auto-generates clinical notes. HIPAA compliant. Healthcare-specific AI.",
+    category:["Teachers"],
+    pricing:"Paid",
+    website:"https://www.ambiencehealth.ai",
+    tags:["Healthcare","Business"],
+    rating:4.8,
+    users:20,
+    updated:"2026-04-23",
+    trending:false
+},
+{
+    name:"Figure AI Humanoid",
+    description:"Autonomous humanoid robots.",
+    details:"General-purpose robots for logistics and manufacturing. AI-powered vision and manipulation. Physical AI breakthrough.",
+    category:["Developers"],
+    pricing:"Paid",
+    website:"https://www.figure.ai",
+    tags:["Robotics","Hardware"],
+    rating:4.9,
+    users:8,
+    updated:"2026-05-02",
+    trending:true
+},
+{
+    name:"Mistral AI",
+    description:"Open-source LLM company.",
+    details:"Lightweight and efficient language models. Commercial-friendly licensing. API available for deployment.",
+    category:["Developers"],
+    pricing:"Freemium",
+    website:"https://mistral.ai",
+    tags:["Models","Open Source"],
+    rating:4.8,
+    users:35,
+    updated:"2026-04-28",
+    trending:false
+},
+{
+    name:"Anthropic Constitutional AI",
+    description:"Research platform for safe AI.",
+    details:"Explore advanced AI safety concepts. Claude-based research tools. Interpretability focus.",
+    category:["Developers"],
+    pricing:"Free",
+    website:"https://www.anthropic.com",
+    tags:["Research","Safety"],
+    rating:4.8,
+    users:14,
+    updated:"2026-04-25",
+    trending:false
+},
+{
+    name:"Vivid Climate AI",
+    description:"AI for climate and sustainability.",
+    details:"Carbon footprint analysis and reduction. ESG reporting automation. Environmental impact modeling.",
+    category:["Teachers"],
+    pricing:"Paid",
+    website:"https://www.vividclimate.ai",
+    tags:["Sustainability","Business"],
+    rating:4.6,
+    users:8,
+    updated:"2026-04-22",
+    trending:false
+},
+{
+    name:"Praxis AI Manufacturing",
+    description:"AI optimization for manufacturing.",
+    details:"Production scheduling and optimization. Predictive maintenance. Supply chain intelligence. Industry 4.0 ready.",
+    category:["Developers"],
+    pricing:"Paid",
+    website:"https://www.praxis.ai",
+    tags:["Manufacturing","Enterprise"],
+    rating:4.7,
+    users:11,
+    updated:"2026-04-20",
+    trending:false
+},
+{
+    name:"LemonAI",
+    description:"Adult content creation platform.",
+    details:"AI image and text generation for adult content. Customizable scenarios and themes. Community features.",
+    category:["Free"],
+    pricing:"Freemium",
+    website:"https://www.lemonai.com",
+    tags:["NSFW","Generation"],
+    rating:4.4,
+    users:50,
+    updated:"2026-05-01",
+    trending:true
+},
+{
+    name:"BannedAI",
+    description:"Unrestricted AI content generation.",
+    details:"Unfiltered image and text generation. NSFW content creation. Community-driven feature updates.",
+    category:["Free"],
+    pricing:"Freemium",
+    website:"https://banned.ai",
+    tags:["NSFW","Open Source"],
+    rating:4.3,
+    users:45,
+    updated:"2026-04-29",
+    trending:true
+},
+{
+    name:"Mistral Pixtral",
+    description:"Multimodal vision-language model.",
+    details:"Image understanding and analysis. Text extraction from images. Visual question answering. Free API tier.",
+    category:["Developers","Free"],
+    pricing:"Freemium",
+    website:"https://docs.mistral.ai",
+    tags:["Vision","Multimodal"],
+    rating:4.7,
+    users:19,
+    updated:"2026-04-27",
+    trending:false
+},
+{
+    name:"LangChain",
+    description:"Framework for building AI applications.",
+    details:"Chainable AI components. LLM integration platform. Vector database support. Open-source with commercial support.",
+    category:["Developers"],
+    pricing:"Free",
+    website:"https://www.langchain.com",
+    tags:["Framework","Open Source"],
+    rating:4.8,
+    users:52,
+    updated:"2026-05-01",
+    trending:false
+},
+{
+    name:"Ollama",
+    description:"Run LLMs locally and easily.",
+    details:"Download and run open-source models locally. No internet required. Works offline. Supports Mac, Linux, Windows.",
+    category:["Developers","Free"],
+    pricing:"Free",
+    website:"https://ollama.ai",
+    tags:["Local","Open Source"],
+    rating:4.7,
+    users:38,
+    updated:"2026-04-26",
+    trending:false
+},
+{
+    name:"ComfyUI",
+    description:"Advanced image generation workflow builder.",
+    details:"Node-based interface for Stable Diffusion. Custom workflows and extensions. Community models and plugins.",
+    category:["Developers","Free"],
+    pricing:"Free",
+    website:"https://github.com/comfyorg/ComfyUI",
+    tags:["Image","Open Source"],
+    rating:4.8,
+    users:41,
+    updated:"2026-04-25",
+    trending:false
+},
+{
+    name:"Synthesia AI Studio",
+    description:"AI-powered video editing.",
+    details:"Automatic video editing with scene detection. AI color grading and effects. Professional export options.",
+    category:["YouTubers"],
+    pricing:"Paid",
+    website:"https://www.synthesia.io/studio",
+    tags:["Video","Editing"],
+    rating:4.7,
+    users:13,
+    updated:"2026-04-24",
+    trending:false
+},
+{
+    name:"Movio AI",
+    description:"AI video generation for social media.",
+    details:"Create short-form videos from text. Automatic captions and effects. Social media optimization.",
+    category:["YouTubers","Free"],
+    pricing:"Freemium",
+    website:"https://movio.la",
+    tags:["Video","Social Media"],
+    rating:4.6,
+    users:16,
+    updated:"2026-04-22",
+    trending:false
+},
+{
+    name:"Eleven Labs Speech-to-Speech",
+    description:"Advanced voice cloning and conversion.",
+    details:"Clone any voice with minimal samples. Real-time voice conversion. Multilingual support.",
+    category:["YouTubers"],
+    pricing:"Paid",
+    website:"https://elevenlabs.io/voice-lab",
+    tags:["Voice","Audio"],
+    rating:4.8,
+    users:25,
+    updated:"2026-05-02",
+    trending:true
 }
 ];
 
+// Pagination
+const itemsPerPage = 12;
 let currentPage = 1;
-const toolsPerPage = 12;
-let filteredTools = tools;
-let currentFilter = "All";
+let filteredTools = [...tools];
 
-const toolsGrid = document.getElementById('toolsGrid');
-const paginationDiv = document.getElementById('pagination');
-const searchInput = document.getElementById('searchInput');
-const sortSelect = document.getElementById('sortSelect');
-const filterChips = document.querySelectorAll('.filter-chip');
-const trendingBtn = document.getElementById('trendingBtn');
-
-filterChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-        filterChips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-        currentFilter = chip.dataset.category;
-        currentPage = 1;
-        applyFilters();
-    });
-});
-
-searchInput.addEventListener('input', () => {
-    currentPage = 1;
-    applyFilters();
-});
-
-sortSelect.addEventListener('change', () => {
-    applyFilters();
-});
-
-trendingBtn.addEventListener('click', () => {
-    filteredTools = tools.filter(tool => tool.trending);
-    currentPage = 1;
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
     displayTools();
-    updatePagination();
+    setupFilters();
+    setupSearch();
+    setupSort();
 });
 
-function applyFilters() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const sortValue = sortSelect.value;
-    
-    filteredTools = tools.filter(tool => {
-        const matchSearch = tool.name.toLowerCase().includes(searchTerm) || 
-                          tool.description.toLowerCase().includes(searchTerm);
-        const matchFilter = currentFilter === 'All' || tool.category.includes(currentFilter);
-        return matchSearch && matchFilter;
-    });
-    
-    if(sortValue === 'rating') {
-        filteredTools.sort((a, b) => b.rating - a.rating);
-    } else if(sortValue === 'newest') {
-        filteredTools.sort((a, b) => new Date(b.updated) - new Date(a.updated));
-    } else if(sortValue === 'users') {
-        filteredTools.sort((a, b) => b.users - a.users);
-    }
-    
-    displayTools();
-    updatePagination();
-}
-
-function displayTools() {
-    toolsGrid.innerHTML = '';
-    const start = (currentPage - 1) * toolsPerPage;
-    const end = start + toolsPerPage;
+// Display tools
+function displayTools(page = 1) {
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
     const paginatedTools = filteredTools.slice(start, end);
+    
+    const grid = document.getElementById('toolsGrid');
+    grid.innerHTML = '';
     
     paginatedTools.forEach(tool => {
         const card = document.createElement('div');
@@ -1367,54 +1439,103 @@ function displayTools() {
                 <span class="badge">⭐ ${tool.rating}</span>
             </div>
             <p>${tool.description}</p>
-            <div class="tags">
-                ${tool.tags.map(tag => `<span>${tag}</span>`).join('')}
-            </div>
+            <div class="tags">${tool.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
+            <div style="color:var(--secondary);font-size:.9rem;margin-bottom:10px;">${tool.pricing}</div>
             <div class="tool-footer">
-                <a href="${tool.website}" class="visit-btn" target="_blank">Visit</a>
-                <button class="details-btn" onclick="openModal('${tool.name}')">Details</button>
+                <a href="${tool.website}" target="_blank" class="visit-btn">Visit</a>
+                <button class="details-btn" onclick="openModal('${tool.name}', \`${tool.details.replace(/'/g, "\\'")}\`)">Details</button>
             </div>
         `;
-        toolsGrid.appendChild(card);
+        grid.appendChild(card);
     });
+    
+    setupPagination(Math.ceil(filteredTools.length / itemsPerPage), page);
 }
 
-function updatePagination() {
-    paginationDiv.innerHTML = '';
-    const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+// Setup pagination
+function setupPagination(pages, current) {
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = '';
     
-    for(let i = 1; i <= totalPages; i++) {
+    for (let i = 1; i <= pages; i++) {
         const btn = document.createElement('button');
         btn.textContent = i;
-        if(i === currentPage) btn.classList.add('active');
-        btn.addEventListener('click', () => {
+        btn.className = i === current ? 'active' : '';
+        btn.onclick = () => {
             currentPage = i;
-            displayTools();
-            updatePagination();
+            displayTools(i);
             window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-        paginationDiv.appendChild(btn);
+        };
+        pagination.appendChild(btn);
     }
 }
 
-function openModal(toolName) {
-    const tool = tools.find(t => t.name === toolName);
+// Filter setup
+function setupFilters() {
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            const category = chip.dataset.category;
+            filterByCategory(category);
+        });
+    });
+}
+
+function filterByCategory(category) {
+    if (category === 'All') {
+        filteredTools = [...tools];
+    } else {
+        filteredTools = tools.filter(tool => tool.category.includes(category));
+    }
+    currentPage = 1;
+    displayTools();
+}
+
+// Search setup
+function setupSearch() {
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        filteredTools = tools.filter(tool => 
+            tool.name.toLowerCase().includes(query) || 
+            tool.description.toLowerCase().includes(query) ||
+            tool.tags.some(tag => tag.toLowerCase().includes(query))
+        );
+        currentPage = 1;
+        displayTools();
+    });
+}
+
+// Sort setup
+function setupSort() {
+    const sortSelect = document.getElementById('sortSelect');
+    sortSelect.addEventListener('change', (e) => {
+        const value = e.target.value;
+        if (value === 'rating') {
+            filteredTools.sort((a, b) => b.rating - a.rating);
+        } else if (value === 'newest') {
+            filteredTools.sort((a, b) => new Date(b.updated) - new Date(a.updated));
+        } else if (value === 'users') {
+            filteredTools.sort((a, b) => b.users - a.users);
+        }
+        currentPage = 1;
+        displayTools();
+    });
+    
+    document.getElementById('trendingBtn').addEventListener('click', () => {
+        filteredTools = tools.filter(tool => tool.trending);
+        currentPage = 1;
+        displayTools();
+    });
+}
+
+// Modal
+function openModal(name, details) {
     const modal = document.getElementById('modal');
     const modalBody = document.getElementById('modalBody');
-    
-    modalBody.innerHTML = `
-        <h2>${tool.name}</h2>
-        <p><strong>Pricing:</strong> ${tool.pricing}</p>
-        <p><strong>Rating:</strong> ⭐ ${tool.rating}/5</p>
-        <p><strong>Users:</strong> ${tool.users}k+ active users</p>
-        <p><strong>Last Updated:</strong> ${tool.updated}</p>
-        <p><strong>Categories:</strong> ${tool.category.join(', ')}</p>
-        <hr style="margin: 15px 0; opacity: 0.3;">
-        <p><strong>Detailed Description:</strong></p>
-        <p>${tool.details}</p>
-        <p style="margin-top: 15px;"><strong>Best For:</strong> ${tool.category.join(', ')}</p>
-    `;
-    
+    modalBody.innerHTML = `<h2>${name}</h2><p>${details}</p>`;
     modal.classList.add('active');
 }
 
@@ -1422,8 +1543,13 @@ function closeModal() {
     document.getElementById('modal').classList.remove('active');
 }
 
-// Initial display
-applyFilters();
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('modal');
+    if (e.target === modal) {
+        modal.classList.remove('active');
+    }
+});
 </script>
+
 </body>
 </html>
