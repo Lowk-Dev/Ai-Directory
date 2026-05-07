@@ -1004,68 +1004,8 @@ tags:["Legal"],
 rating:4.6,
 users:3,
 updated:"2026-03-22",
-trending:false
-},
-{
-name:"Documate",
-description:"Legal document automation.",
-category:["Lawyers"],
-pricing:"Paid",
-website:"https://documate.org",
-tags:["Legal"],
-rating:4.4,
-users:2,
-updated:"2026-03-21",
-trending:false
-},
-{
-name:"Beautiful.ai",
-description:"AI presentations platform.",
-category:["Teachers"],
-pricing:"Paid",
-website:"https://www.beautiful.ai",
-tags:["Slides"],
-rating:4.5,
-users:8,
-updated:"2026-03-20",
-trending:false
-},
-{
-name:"Murf AI",
-description:"AI voice generator.",
-category:["YouTubers"],
-pricing:"Freemium",
-website:"https://murf.ai",
-tags:["Voice"],
-rating:4.6,
-users:11,
-updated:"2026-03-19",
-trending:false
-},
-{
-name:"Speechify",
-description:"AI text-to-speech platform.",
-category:["Students"],
-pricing:"Freemium",
-website:"https://speechify.com",
-tags:["Audio"],
-rating:4.6,
-users:20,
-updated:"2026-03-18",
-trending:false
-},
-{
-name:"Turbolearn AI",
-description:"Study assistant for students.",
-category:["Students"],
-pricing:"Freemium",
-website:"https://www.turbolearn.ai",
-tags:["Study"],
-rating:4.5,
-users:4,
-updated:"2026-03-17",
 trending:true
-}
+},
 {
     name:"Claude",
     description:"Long-form reasoning AI.",
@@ -1233,7 +1173,8 @@ function renderPagination(total){
     for(let i=1;i<=pages;i++){
         container.innerHTML+=`
             <button 
-            class="${i===currentPage ? 'active':''}"
+            class="${i===currentPage ? 'active':'
+            }"
             onclick="changePage(${i})">${i}</button>
         `;
     }
