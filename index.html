@@ -1,64 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium AI Tools Directory</title>
 
-<title>AI Tools Directory</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
-    --bg:#060816;
-    --card:#0f172a;
-    --card2:#111827;
-    --border:rgba(255,255,255,0.08);
-    --text:#ffffff;
-    --muted:#9aa4c7;
-    --primary:#7c5cff;
-    --secondary:#00d4ff;
-    --shadow:0 20px 50px rgba(0,0,0,0.5);
-    --glass:rgba(255,255,255,0.04);
-}
-
-[data-theme="light"]{
-    --bg:#f4f7ff;
-    --card:#ffffff;
-    --card2:#eef2ff;
-    --text:#111827;
-    --muted:#4b5563;
-    --border:rgba(0,0,0,0.08);
-    --glass:rgba(255,255,255,0.8);
-}
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family:'Inter',sans-serif;
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
+    background:#050816;
+    color:white;
     overflow-x:hidden;
-    transition:0.3s;
 }
 
-/* Animated BG */
+:root{
+    --primary:#7c5cff;
+    --secondary:#00d4ff;
+    --card:rgba(255,255,255,.05);
+    --border:rgba(255,255,255,.08);
+    --muted:#94a3b8;
+}
 
+/* animated background */
 .bg{
     position:fixed;
     inset:0;
     z-index:-1;
-    overflow:hidden;
 }
 
 .blob{
@@ -67,106 +42,105 @@ body{
     height:500px;
     border-radius:50%;
     filter:blur(120px);
-    opacity:0.25;
+    opacity:.25;
     animation:float 10s infinite ease-in-out;
 }
 
 .blob:nth-child(1){
     background:#7c5cff;
-    top:-150px;
-    left:-150px;
+    top:-100px;
+    left:-100px;
 }
 
 .blob:nth-child(2){
     background:#00d4ff;
-    bottom:-150px;
-    right:-150px;
+    bottom:-100px;
+    right:-100px;
 }
 
 @keyframes float{
-    0%,100%{transform:translateY(0px);}
-    50%{transform:translateY(50px);}
+    50%{
+        transform:translateY(40px);
+    }
+}
+
+/* layout */
+.layout{
+    display:grid;
+    grid-template-columns:220px minmax(850px,1fr) 220px;
+    gap:20px;
+}
+
+/* ads */
+.ad-sidebar{
+    position:sticky;
+    top:100px;
+    height:fit-content;
+    padding:20px;
+}
+
+.ad-box{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+    backdrop-filter:blur(20px);
+}
+
+.ad-box span{
+    color:var(--secondary);
+    font-size:.8rem;
+}
+
+.ad-box h3{
+    margin:10px 0;
+}
+
+/* main */
+.main-content{
+    width:100%;
 }
 
 .container{
-    width:min(1450px,92%);
+    width:min(1200px,95%);
     margin:auto;
 }
 
-/* NAV */
-
+/* navbar */
 nav{
     position:sticky;
     top:0;
-    z-index:100;
     backdrop-filter:blur(20px);
+    background:rgba(0,0,0,.2);
+    z-index:100;
     border-bottom:1px solid var(--border);
-    background:rgba(0,0,0,0.2);
 }
 
 .nav-inner{
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     padding:20px 0;
 }
 
 .logo{
-    font-size:1.6rem;
+    font-size:1.5rem;
     font-weight:800;
     background:linear-gradient(to right,#7c5cff,#00d4ff);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:22px;
-}
-
-.nav-links a{
-    color:var(--muted);
-    text-decoration:none;
-    transition:0.3s;
-    font-size:0.95rem;
-}
-
-.nav-links a:hover{
-    color:var(--text);
-}
-
-.nav-actions{
-    display:flex;
-    gap:12px;
-}
-
-.theme-btn{
-    border:none;
-    background:var(--glass);
-    border:1px solid var(--border);
-    color:var(--text);
-    padding:12px 16px;
-    border-radius:14px;
-    cursor:pointer;
-}
-
-.mobile-btn{
-    display:none;
-}
-
-/* HERO */
-
+/* hero */
 .hero{
-    padding:100px 0 60px;
     text-align:center;
+    padding:80px 0;
 }
 
 .hero h1{
-    font-size:5rem;
-    line-height:1;
-    margin-bottom:25px;
-    font-weight:800;
+    font-size:4rem;
+    margin-bottom:20px;
 }
 
 .gradient{
@@ -176,493 +150,219 @@ nav{
 }
 
 .hero p{
-    max-width:850px;
+    max-width:700px;
     margin:auto;
     color:var(--muted);
-    line-height:1.8;
-    font-size:1.15rem;
+    line-height:1.7;
 }
 
-/* SEARCH */
-
+/* search */
 .search-section{
-    margin-top:50px;
+    margin-top:40px;
 }
 
-.search-wrapper{
+.search-box{
     display:flex;
-    gap:18px;
-    align-items:center;
-    background:var(--glass);
-    border:1px solid var(--border);
-    padding:18px;
-    border-radius:24px;
-    backdrop-filter:blur(20px);
-    box-shadow:var(--shadow);
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-.search-wrapper input{
-    flex:1;
-    background:none;
-    border:none;
-    outline:none;
-    color:var(--text);
-    font-size:1rem;
-}
-
-.search-wrapper button,
-.sort-select{
+.search-box input,
+.search-box select{
+    padding:14px 18px;
     border:none;
     border-radius:14px;
-    padding:14px 18px;
-    font-weight:600;
+    background:var(--card);
+    color:white;
+    min-width:220px;
 }
 
-.search-wrapper button{
+.search-box button{
+    padding:14px 20px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
     background:linear-gradient(to right,#7c5cff,#00d4ff);
     color:white;
-    cursor:pointer;
 }
 
-.sort-select{
-    background:var(--card);
-    color:var(--text);
-    border:1px solid var(--border);
-}
-
-/* FILTERS */
-
+/* filters */
 .filters{
-    margin-top:28px;
     display:flex;
-    flex-wrap:wrap;
-    gap:14px;
     justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
 }
 
 .filter-chip{
-    padding:12px 20px;
+    padding:10px 18px;
     border-radius:999px;
-    border:1px solid var(--border);
-    background:var(--glass);
+    background:var(--card);
     cursor:pointer;
-    color:var(--muted);
-    transition:0.3s;
-    font-size:0.95rem;
+    transition:.3s;
 }
 
-.filter-chip.active,
-.filter-chip:hover{
+.filter-chip.active{
     background:linear-gradient(to right,#7c5cff,#00d4ff);
-    color:white;
-    border-color:transparent;
 }
 
-/* STATS */
-
-.stats{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:22px;
-}
-
-.stat-card{
-    padding:28px;
-    border-radius:24px;
-    background:var(--glass);
-    border:1px solid var(--border);
-    backdrop-filter:blur(18px);
-}
-
-.stat-card h2{
-    font-size:2.2rem;
-    margin-bottom:8px;
-}
-
-.stat-card p{
-    color:var(--muted);
-}
-
-/* SECTION */
-
-.section-title{
-    margin:90px 0 28px;
-    font-size:2.1rem;
-}
-
-/* FEATURED */
-
-.featured-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:24px;
-}
-
-.featured-card{
-    padding:28px;
-    border-radius:26px;
-    background:linear-gradient(
-        145deg,
-        rgba(124,92,255,0.12),
-        rgba(0,212,255,0.08)
-    );
-    border:1px solid var(--border);
-    position:relative;
-    overflow:hidden;
-    transition:0.4s;
-}
-
-.featured-card:hover{
-    transform:translateY(-8px);
-}
-
-.featured-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    padding:1px;
-    border-radius:26px;
-    background:linear-gradient(to right,#7c5cff,#00d4ff);
-    -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-    -webkit-mask-composite:xor;
-    pointer-events:none;
-}
-
-.badge{
-    display:inline-flex;
-    padding:8px 14px;
-    border-radius:999px;
-    background:rgba(255,255,255,0.08);
-    color:#fff;
-    font-size:0.8rem;
-    margin-bottom:20px;
-}
-
-.featured-card h3{
-    font-size:1.5rem;
-    margin-bottom:12px;
-}
-
-.featured-card p{
-    color:var(--muted);
-    line-height:1.7;
-}
-
-.tool-meta{
-    margin-top:20px;
-    display:flex;
-    gap:15px;
-    color:var(--muted);
-}
-
-/* GRID */
-
+/* cards */
 .tools-grid{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
-    gap:24px;
-    padding-bottom:80px;
+    gap:25px;
+    padding-bottom:60px;
 }
 
 .tool-card{
-    background:var(--glass);
+    background:var(--card);
     border:1px solid var(--border);
-    border-radius:28px;
-    overflow:hidden;
-    transition:0.4s;
-    backdrop-filter:blur(18px);
-    position:relative;
-}
-
-.tool-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        145deg,
-        transparent,
-        rgba(124,92,255,0.08),
-        transparent
-    );
-    opacity:0;
-    transition:0.4s;
-}
-
-.tool-card:hover::before{
-    opacity:1;
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(20px);
+    transition:.3s;
 }
 
 .tool-card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(124,92,255,0.5);
+    transform:translateY(-6px);
 }
 
-.card-top{
-    padding:24px;
+.tool-top{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    margin-bottom:15px;
 }
 
-.tool-logo{
-    width:62px;
-    height:62px;
-    border-radius:18px;
-    background:white;
-    object-fit:contain;
-    padding:10px;
-}
-
-.tool-badges{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-}
-
-.tool-badges span{
-    padding:7px 12px;
+.badge{
+    background:rgba(124,92,255,.2);
+    padding:8px 12px;
     border-radius:999px;
-    font-size:0.75rem;
-    font-weight:600;
+    font-size:.8rem;
 }
 
-.trending{
-    background:rgba(0,212,255,0.14);
-    color:#00d4ff;
-}
-
-.featured{
-    background:rgba(124,92,255,0.14);
-    color:#b8a9ff;
-}
-
-.tool-content{
-    padding:0 24px 24px;
-}
-
-.tool-content h3{
-    margin-bottom:10px;
-    font-size:1.35rem;
-}
-
-.tagline{
+.tool-card p{
     color:var(--muted);
-    line-height:1.7;
-    margin-bottom:18px;
+    line-height:1.6;
+    margin-bottom:15px;
 }
 
 .tags{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:8px;
     margin-bottom:20px;
 }
 
 .tags span{
-    background:rgba(255,255,255,0.06);
-    padding:8px 12px;
+    background:rgba(255,255,255,.05);
+    padding:6px 10px;
     border-radius:999px;
-    font-size:0.82rem;
-    color:var(--muted);
-}
-
-.tool-stats{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:22px;
-    color:var(--muted);
+    font-size:.8rem;
 }
 
 .tool-footer{
     display:flex;
-    gap:12px;
+    gap:10px;
 }
 
 .tool-footer a,
 .tool-footer button{
     flex:1;
-    padding:13px;
-    border-radius:14px;
+    padding:12px;
     border:none;
+    border-radius:12px;
     cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.tool-footer a{
     text-decoration:none;
-    background:linear-gradient(to right,#7c5cff,#00d4ff);
-    color:white;
     text-align:center;
-}
-
-.tool-footer button{
-    background:rgba(255,255,255,0.05);
-    border:1px solid var(--border);
-    color:var(--text);
-}
-
-.tool-footer button:hover{
-    transform:translateY(-2px);
-}
-
-.fav-btn.active{
-    background:#ef4444;
     color:white;
 }
 
-/* PAGINATION */
+.visit-btn{
+    background:linear-gradient(to right,#7c5cff,#00d4ff);
+}
 
+.details-btn{
+    background:rgba(255,255,255,.05);
+}
+
+/* modal */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:min(600px,90%);
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+}
+
+.close-modal{
+    position:absolute;
+    right:20px;
+    top:20px;
+    cursor:pointer;
+}
+
+/* pagination */
 .pagination{
     display:flex;
     justify-content:center;
-    gap:12px;
-    margin-bottom:80px;
-    flex-wrap:wrap;
+    gap:10px;
+    padding-bottom:60px;
 }
 
 .pagination button{
-    width:48px;
-    height:48px;
+    width:45px;
+    height:45px;
     border:none;
-    border-radius:14px;
-    background:var(--glass);
-    border:1px solid var(--border);
-    color:var(--text);
+    border-radius:12px;
     cursor:pointer;
+    background:var(--card);
+    color:white;
 }
 
 .pagination button.active{
     background:linear-gradient(to right,#7c5cff,#00d4ff);
 }
 
-/* MODAL */
-
-.modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.8);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    opacity:0;
-    visibility:hidden;
-    transition:0.3s;
-    z-index:999;
-    padding:20px;
-}
-
-.modal.open{
-    opacity:1;
-    visibility:visible;
-}
-
-.modal-box{
-    width:min(700px,100%);
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:28px;
-    padding:35px;
-    position:relative;
-}
-
-.close-btn{
-    position:absolute;
-    right:18px;
-    top:18px;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    border:none;
-    cursor:pointer;
-    background:rgba(255,255,255,0.08);
-    color:white;
-}
-
-.modal-header{
-    display:flex;
-    gap:20px;
-    align-items:center;
-    margin-bottom:25px;
-}
-
-.modal-logo{
-    width:80px;
-    height:80px;
-    border-radius:20px;
-    background:white;
-    padding:10px;
-}
-
-.modal-body p{
-    color:var(--muted);
-    line-height:1.8;
-}
-
-.modal-grid{
-    margin-top:25px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.modal-grid div{
-    background:rgba(255,255,255,0.04);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:18px;
-}
-
-.visit-btn{
-    display:inline-flex;
-    margin-top:25px;
-    background:linear-gradient(to right,#7c5cff,#00d4ff);
-    color:white;
-    padding:15px 22px;
-    border-radius:14px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-/* FOOTER */
-
+/* footer */
 footer{
-    padding:45px 0;
-    border-top:1px solid var(--border);
     text-align:center;
+    padding:50px;
+    border-top:1px solid var(--border);
     color:var(--muted);
 }
 
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .hero h1{
-        font-size:3rem;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .mobile-btn{
-        display:block;
-    }
-
-    .search-wrapper{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .modal-grid{
+/* mobile */
+@media(max-width:1200px){
+    .layout{
         grid-template-columns:1fr;
     }
 
+    .ad-sidebar{
+        display:none;
+    }
 }
 
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.5rem;
+    }
+}
 </style>
 </head>
 <body>
@@ -672,64 +372,44 @@ footer{
     <div class="blob"></div>
 </div>
 
+<div class="layout">
+
+<!-- LEFT ADS -->
+<aside class="ad-sidebar">
+    <div class="ad-box">
+        <span>Sponsored</span>
+        <h3>Advertise Here</h3>
+        <p>Your AI startup can appear here.</p>
+    </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main-content">
+
 <nav>
     <div class="container nav-inner">
-
         <div class="logo">AI Directory</div>
-
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Trending</a>
-            <a href="#">Featured</a>
-            <a href="#">Submit Tool</a>
-        </div>
-
-        <div class="nav-actions">
-            <button class="theme-btn" id="themeToggle">
-                Theme
-            </button>
-        </div>
-
     </div>
 </nav>
 
 <section class="hero container">
-
-    <h1>
-        Discover The Best
-        <span class="gradient">AI Tools</span>
-    </h1>
-
-    <p>
-        Explore 120+ AI tools for students, teachers, lawyers,
-        creators, YouTubers, coding, productivity, research,
-        automation and next-gen content creation.
-    </p>
+    <h1>Discover The Best <span class="gradient">AI Tools</span></h1>
+    <p>Find powerful AI tools for students, teachers, lawyers, YouTubers, creators and startups.</p>
 
     <div class="search-section">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search AI tools...">
 
-        <div class="search-wrapper">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search AI tools..."
-            >
-
-            <select id="sortSelect" class="sort-select">
+            <select id="sortSelect">
                 <option value="rating">Top Rated</option>
                 <option value="newest">Newest</option>
-                <option value="popularity">Popularity</option>
+                <option value="users">Most Popular</option>
             </select>
 
-            <button id="trendingToggle">
-                Trending
-            </button>
-
+            <button id="trendingBtn">Trending</button>
         </div>
 
         <div class="filters">
-
             <div class="filter-chip active" data-category="All">All</div>
             <div class="filter-chip" data-category="Students">Students</div>
             <div class="filter-chip" data-category="Teachers">Teachers</div>
@@ -737,565 +417,293 @@ footer{
             <div class="filter-chip" data-category="YouTubers">YouTubers</div>
             <div class="filter-chip" data-category="Free">Free</div>
             <div class="filter-chip" data-category="Under $10">Under $10</div>
-
         </div>
-
     </div>
-
-    <div class="stats">
-
-        <div class="stat-card">
-            <h2 id="toolCount">120+</h2>
-            <p>AI Tools</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>6</h2>
-            <p>Main Categories</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>2026</h2>
-            <p>Updated Database</p>
-        </div>
-
-    </div>
-
 </section>
 
 <section class="container">
-
-    <h2 class="section-title">
-        Featured Tools
-    </h2>
-
-    <div class="featured-grid" id="featuredTools"></div>
-
-</section>
-
-<section class="container">
-
-    <h2 class="section-title">
-        Explore AI Tools
-    </h2>
-
     <div class="tools-grid" id="toolsGrid"></div>
-
     <div class="pagination" id="pagination"></div>
-
 </section>
 
-<div class="modal" id="toolModal">
+</main>
 
-    <div class="modal-box">
-
-        <button class="close-btn" id="modalClose">
-            ✕
-        </button>
-
-        <div id="modalContent"></div>
-
+<!-- RIGHT ADS -->
+<aside class="ad-sidebar">
+    <div class="ad-box">
+        <span>Featured</span>
+        <h3>Launch Your Product</h3>
+        <p>Premium sponsor slot.</p>
     </div>
+</aside>
 
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">✕</span>
+        <div id="modalBody"></div>
+    </div>
 </div>
 
 <footer>
-    Built with HTML • CSS • Vanilla JavaScript • Premium AI Directory UI
+    Contact: skibdiroblox696@gmail.com <br>
+    Premium AI Directory © 2026
 </footer>
 
 <script>
-
 const tools = [
 {
-name:"ChatGPT",
-tagline:"The leading conversational AI assistant",
-description:"ChatGPT helps with writing, coding, research, brainstorming and productivity using advanced multimodal AI.",
-category:["Students","Teachers","Free","Under $10"],
-pricing:"Freemium",
-website:"https://chatgpt.com",
-logo:"https://logo.clearbit.com/openai.com",
-tags:["Writing","Research","Coding"],
-featured:true,
-trending:true,
-rating:4.9,
-users:"300M+",
-updated:"2026-05-01",
-platform:["Web","iOS","Android"],
-aiType:"Writing AI",
-color:"#10A37F"
+    name:"ChatGPT",
+    description:"AI assistant for writing, coding and productivity.",
+    category:["Students","Free"],
+    pricing:"Freemium",
+    website:"https://chatgpt.com",
+    tags:["Writing","Coding"],
+    rating:4.9,
+    users:300,
+    updated:"2026-05-01",
+    trending:true
 },
 {
-name:"Claude",
-tagline:"Thoughtful AI for long-form reasoning",
-description:"Claude excels at document analysis, deep reasoning, coding assistance and nuanced conversations.",
-category:["Students","Lawyers","Teachers"],
-pricing:"Freemium",
-website:"https://claude.ai",
-logo:"https://logo.clearbit.com/anthropic.com",
-tags:["Writing","Research","Documents"],
-featured:true,
-trending:true,
-rating:4.9,
-users:"40M+",
-updated:"2026-05-02",
-platform:["Web","iOS"],
-aiType:"Research AI",
-color:"#D97706"
+    name:"Claude",
+    description:"Long-form reasoning AI.",
+    category:["Students","Lawyers"],
+    pricing:"Freemium",
+    website:"https://claude.ai",
+    tags:["Research"],
+    rating:4.8,
+    users:40,
+    updated:"2026-05-02",
+    trending:true
 },
 {
-name:"Gemini",
-tagline:"Google’s multimodal AI assistant",
-description:"Gemini combines web intelligence, productivity features and AI workflows for everyday users.",
-category:["Students","Teachers","Free"],
-pricing:"Freemium",
-website:"https://gemini.google.com",
-logo:"https://logo.clearbit.com/google.com",
-tags:["Research","Productivity","Chat"],
-featured:true,
-trending:true,
-rating:4.8,
-users:"120M+",
-updated:"2026-05-03",
-platform:["Web","Android"],
-aiType:"Research AI",
-color:"#4285F4"
+    name:"Gemini",
+    description:"Google AI assistant.",
+    category:["Students","Teachers"],
+    pricing:"Freemium",
+    website:"https://gemini.google.com",
+    tags:["Research"],
+    rating:4.8,
+    users:150,
+    updated:"2026-04-29",
+    trending:true
+},
+{
+    name:"CapCut",
+    description:"AI video editor for creators.",
+    category:["YouTubers","Free"],
+    pricing:"Free",
+    website:"https://www.capcut.com",
+    tags:["Video"],
+    rating:4.7,
+    users:500,
+    updated:"2026-04-22",
+    trending:true
+},
+{
+    name:"Harvey",
+    description:"AI legal assistant.",
+    category:["Lawyers"],
+    pricing:"Paid",
+    website:"https://harvey.ai",
+    tags:["Legal"],
+    rating:4.7,
+    users:2,
+    updated:"2026-04-18",
+    trending:false
+},
+{
+    name:"Gamma",
+    description:"AI presentations tool.",
+    category:["Teachers","Students"],
+    pricing:"Freemium",
+    website:"https://gamma.app",
+    tags:["Slides"],
+    rating:4.6,
+    users:20,
+    updated:"2026-04-15",
+    trending:false
+},
+{
+    name:"Runway",
+    description:"AI video generation platform.",
+    category:["YouTubers"],
+    pricing:"Freemium",
+    website:"https://runwayml.com",
+    tags:["Video"],
+    rating:4.8,
+    users:30,
+    updated:"2026-05-03",
+    trending:true
+},
+{
+    name:"NotebookLM",
+    description:"Google AI notebook assistant.",
+    category:["Students","Teachers","Free"],
+    pricing:"Free",
+    website:"https://notebooklm.google.com",
+    tags:["Study"],
+    rating:4.7,
+    users:20,
+    updated:"2026-05-04",
+    trending:true
 }
 ];
 
-const extraTools = [
-"Perplexity","NotebookLM","Canva AI","Gamma","ElevenLabs","Descript","Runway","CapCut AI",
-"Pictory","Otter AI","Jasper","Copy.ai","Grammarly","Notion AI","Poe","Grok","Midjourney",
-"Leonardo AI","Ideogram","Synthesia","Suno","Cursor","Bolt.new","Lovable","Replit AI",
-"Phind","Elicit","Scite","Consensus","QuillBot","Wordtune","Speechify","Beautiful.ai",
-"Tome","SlidesAI","Khanmigo","Photomath","Mathway","Scholarcy","Humata","AskYourPDF",
-"ChatPDF","MagicSchool AI","Curipod","Gradescope","Kahoot AI","Quizizz AI","Harvey",
-"Casetext","CoCounsel","Spellbook","Luminance","Lawgeex","VidIQ","TubeBuddy","Opus Clip",
-"VEED","InVideo AI","HeyGen","Fliki","Murf AI","Adobe Firefly","Kaiber","Clipdrop",
-"Animoto","Wisecut","Submagic","Captions","Rask AI","DeepBrain AI","Riverside","Taskade",
-"ClickUp AI","Motion","You.com","Character.AI","DeepSeek","Codeium","Tabnine","V0",
-"Uizard","Framer AI","Durable","10Web"
-];
+let currentCategory="All";
+let currentSearch="";
+let currentSort="rating";
+let currentPage=1;
+let trendingOnly=false;
+const itemsPerPage=6;
 
-extraTools.forEach((tool,index)=>{
+function getFilteredTools(){
+    let filtered=[...tools];
 
-tools.push({
-name:tool,
-tagline:"AI-powered workflow and productivity platform",
-description:`${tool} helps creators, professionals and students automate work, generate content and improve productivity using modern AI.`,
-category:index % 6 === 0 ? ["Students","Free"] :
-index % 6 === 1 ? ["Teachers"] :
-index % 6 === 2 ? ["Lawyers"] :
-index % 6 === 3 ? ["YouTubers"] :
-index % 6 === 4 ? ["Under $10"] :
-["Students","Teachers"],
-pricing:index % 3 === 0 ? "Freemium" :
-index % 3 === 1 ? "$9/month" : "Paid",
-website:`https://www.${tool.toLowerCase().replace(/[^a-z0-9]/g,'')}.com`,
-logo:`https://logo.clearbit.com/${tool.toLowerCase().replace(/[^a-z0-9]/g,'')}.com`,
-tags:["AI","Automation","Productivity","Content"],
-featured:index % 7 === 0,
-trending:index % 4 === 0,
-rating:Number((4.2 + Math.random()*0.8).toFixed(1)),
-users:`${Math.floor(Math.random()*50)+1}M+`,
-updated:`2026-04-${String((index % 28)+1).padStart(2,'0')}`,
-platform:["Web","iOS"],
-aiType:"Productivity AI",
-color:["#3B82F6","#8B5CF6","#EC4899","#14B8A6","#F59E0B","#6366F1"][index % 6]
-});
+    if(currentCategory!=="All"){
+        filtered=filtered.filter(tool =>
+            tool.category.includes(currentCategory)
+        );
+    }
 
-});
+    if(currentSearch){
+        filtered=filtered.filter(tool =>
+            tool.name.toLowerCase().includes(currentSearch) ||
+            tool.description.toLowerCase().includes(currentSearch)
+        );
+    }
 
-let currentPage = 1;
-let currentCategory = "All";
-let currentSearch = "";
-let currentSort = "rating";
-let showTrending = false;
-const itemsPerPage = 12;
+    if(trendingOnly){
+        filtered=filtered.filter(tool => tool.trending);
+    }
 
-const state = {
-favorites: JSON.parse(localStorage.getItem("favorites") || "[]"),
-theme: localStorage.getItem("theme") || "dark"
-};
+    if(currentSort==="rating"){
+        filtered.sort((a,b)=>b.rating-a.rating);
+    }
 
-document.documentElement.setAttribute("data-theme", state.theme);
+    if(currentSort==="newest"){
+        filtered.sort((a,b)=>new Date(b.updated)-new Date(a.updated));
+    }
 
-function filterTools(){
+    if(currentSort==="users"){
+        filtered.sort((a,b)=>b.users-a.users);
+    }
 
-let filtered = [...tools];
-
-if(currentCategory !== "All"){
-
-filtered = filtered.filter(tool => {
-
-if(Array.isArray(tool.category)){
-return tool.category.includes(currentCategory);
-}
-
-return tool.category === currentCategory;
-
-});
-
-}
-
-if(currentSearch){
-
-filtered = filtered.filter(tool =>
-
-tool.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
-tool.description.toLowerCase().includes(currentSearch.toLowerCase()) ||
-tool.tags.join(" ").toLowerCase().includes(currentSearch.toLowerCase())
-
-);
-
-}
-
-if(showTrending){
-filtered = filtered.filter(tool => tool.trending);
-}
-
-switch(currentSort){
-
-case "rating":
-filtered.sort((a,b)=>b.rating-a.rating);
-break;
-
-case "newest":
-filtered.sort((a,b)=>new Date(b.updated)-new Date(a.updated));
-break;
-
-case "popularity":
-filtered.sort((a,b)=>parseInt(b.users)-parseInt(a.users));
-break;
-
-}
-
-return filtered;
-
-}
-
-function renderFeatured(){
-
-const container = document.getElementById("featuredTools");
-
-const featured = tools.filter(tool => tool.featured).slice(0,6);
-
-container.innerHTML = featured.map(tool => `
-
-<div class="featured-card">
-
-<span class="badge">Featured</span>
-
-<h3>${tool.name}</h3>
-
-<p>${tool.description}</p>
-
-<div class="tool-meta">
-<span>⭐ ${tool.rating}</span>
-<span>${tool.users}</span>
-</div>
-
-</div>
-
-`).join("");
-
+    return filtered;
 }
 
 function renderTools(){
+    const grid=document.getElementById("toolsGrid");
+    const filtered=getFilteredTools();
 
-const grid = document.getElementById("toolsGrid");
+    const start=(currentPage-1)*itemsPerPage;
+    const paginated=filtered.slice(start,start+itemsPerPage);
 
-const filtered = filterTools();
+    grid.innerHTML=paginated.map(tool=>`
+        <div class="tool-card">
+            <div class="tool-top">
+                <h3>${tool.name}</h3>
+                <div class="badge">${tool.pricing}</div>
+            </div>
 
-const start = (currentPage - 1) * itemsPerPage;
+            <p>${tool.description}</p>
 
-const paginated = filtered.slice(start,start + itemsPerPage);
+            <div class="tags">
+                ${tool.tags.map(tag=>`<span>${tag}</span>`).join("")}
+            </div>
 
-document.getElementById("toolCount").innerText = filtered.length + "+";
+            <div class="tool-footer">
+                <a href="${tool.website}" target="_blank" class="visit-btn">Visit</a>
+                <button class="details-btn" onclick="openModal('${tool.name}')">Details</button>
+            </div>
+        </div>
+    `).join("");
 
-grid.innerHTML = paginated.map(tool => `
-
-<div class="tool-card">
-
-<div class="card-top">
-
-<img
-class="tool-logo"
-src="${tool.logo}"
-alt="${tool.name}"
-loading="lazy"
-/>
-
-<div class="tool-badges">
-
-${tool.trending ? `<span class="trending">Trending</span>` : ""}
-
-${tool.featured ? `<span class="featured">Featured</span>` : ""}
-
-</div>
-
-</div>
-
-<div class="tool-content">
-
-<h3>${tool.name}</h3>
-
-<p class="tagline">
-${tool.tagline}
-</p>
-
-<div class="tags">
-${tool.tags.map(tag => `<span>${tag}</span>`).join("")}
-</div>
-
-<div class="tool-stats">
-<span>⭐ ${tool.rating}</span>
-<span>${tool.users}</span>
-</div>
-
-<div class="tool-footer">
-
-<a href="${tool.website}" target="_blank">
-Visit
-</a>
-
-<button class="fav-btn ${
-state.favorites.includes(tool.name) ? 'active' : ''
-}" onclick="toggleFavorite('${tool.name}')">
-♥
-</button>
-
-<button onclick="openModal('${tool.name}')">
-Details
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-`).join("");
-
-renderPagination(filtered.length);
-
+    renderPagination(filtered.length);
 }
 
 function renderPagination(total){
+    const pages=Math.ceil(total/itemsPerPage);
+    const container=document.getElementById("pagination");
 
-const pages = Math.ceil(total / itemsPerPage);
+    container.innerHTML="";
 
-const pagination = document.getElementById("pagination");
-
-pagination.innerHTML = "";
-
-for(let i=1;i<=pages;i++){
-
-pagination.innerHTML += `
-<button
-class="${i===currentPage ? 'active' : ''}"
-onclick="changePage(${i})"
->
-${i}
-</button>
-`;
-
-}
-
+    for(let i=1;i<=pages;i++){
+        container.innerHTML+=`
+            <button 
+            class="${i===currentPage ? 'active':''}"
+            onclick="changePage(${i})">${i}</button>
+        `;
+    }
 }
 
 function changePage(page){
-
-currentPage = page;
-
-renderTools();
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-function toggleFavorite(name){
-
-if(state.favorites.includes(name)){
-
-state.favorites = state.favorites.filter(f => f !== name);
-
-}else{
-
-state.favorites.push(name);
-
-}
-
-localStorage.setItem(
-"favorites",
-JSON.stringify(state.favorites)
-);
-
-renderTools();
-
+    currentPage=page;
+    renderTools();
 }
 
 function openModal(name){
+    const tool=tools.find(t=>t.name===name);
 
-const tool = tools.find(t => t.name === name);
+    document.getElementById("modalBody").innerHTML=`
+        <h2>${tool.name}</h2>
+        <br>
+        <p>${tool.description}</p>
+        <br>
+        <p>Rating: ${tool.rating}</p>
+        <p>Users: ${tool.users}M+</p>
+        <br>
+        <a href="${tool.website}" target="_blank" class="visit-btn" style="padding:12px 20px;display:inline-block;text-decoration:none;">
+            Visit Website
+        </a>
+    `;
 
-const modal = document.getElementById("toolModal");
-
-const content = document.getElementById("modalContent");
-
-content.innerHTML = `
-
-<div class="modal-header">
-
-<img
-src="${tool.logo}"
-class="modal-logo"
-/>
-
-<div>
-
-<h2>${tool.name}</h2>
-
-<p>${tool.tagline}</p>
-
-</div>
-
-</div>
-
-<div class="modal-body">
-
-<p>${tool.description}</p>
-
-<div class="modal-grid">
-
-<div>
-<strong>Pricing</strong>
-<p>${tool.pricing}</p>
-</div>
-
-<div>
-<strong>Users</strong>
-<p>${tool.users}</p>
-</div>
-
-<div>
-<strong>Platforms</strong>
-<p>${tool.platform.join(", ")}</p>
-</div>
-
-<div>
-<strong>AI Type</strong>
-<p>${tool.aiType}</p>
-</div>
-
-</div>
-
-<div class="tags" style="margin-top:25px;">
-${tool.tags.map(tag => `<span>${tag}</span>`).join("")}
-</div>
-
-<a
-href="${tool.website}"
-target="_blank"
-class="visit-btn"
->
-Visit Website
-</a>
-
-</div>
-
-`;
-
-modal.classList.add("open");
-
+    document.getElementById("modal").classList.add("active");
 }
 
 function closeModal(){
-
-document
-.getElementById("toolModal")
-.classList.remove("open");
-
+    document.getElementById("modal").classList.remove("active");
 }
 
-document
-.getElementById("modalClose")
-.addEventListener("click",closeModal);
-
-document
-.getElementById("themeToggle")
-.addEventListener("click",()=>{
-
-const current = document.documentElement.getAttribute("data-theme");
-
-document.documentElement.setAttribute(
-"data-theme",
-current === "dark" ? "light" : "dark"
-);
-
+document.getElementById("searchInput").addEventListener("input",e=>{
+    currentSearch=e.target.value.toLowerCase();
+    currentPage=1;
+    renderTools();
 });
 
-document
-.getElementById("searchInput")
-.addEventListener("input",e=>{
+document.getElementById("sortSelect").addEventListener("change",e=>{
+    currentSort=e.target.value;
+    renderTools();
+});
 
-currentSearch = e.target.value;
+document.getElementById("trendingBtn").addEventListener("click",()=>{
+    trendingOnly=!trendingOnly;
+    renderTools();
+});
 
-currentPage = 1;
+document.querySelectorAll(".filter-chip").forEach(chip=>{
+    chip.addEventListener("click",()=>{
+        document.querySelectorAll(".filter-chip")
+        .forEach(c=>c.classList.remove("active"));
+
+        chip.classList.add("active");
+
+        currentCategory=chip.dataset.category;
+        currentPage=1;
+
+        renderTools();
+    });
+});
+
+document.getElementById("modal").addEventListener("click",(e)=>{
+    if(e.target.id==="modal"){
+        closeModal();
+    }
+});
 
 renderTools();
-
-});
-
-document
-.getElementById("sortSelect")
-.addEventListener("change",e=>{
-
-currentSort = e.target.value;
-
-renderTools();
-
-});
-
-document
-.getElementById("trendingToggle")
-.addEventListener("click",()=>{
-
-showTrending = !showTrending;
-
-document
-.getElementById("trendingToggle")
-.classList.toggle("active");
-
-renderTools();
-
-});
-
-document.querySelectorAll(".filter-chip").forEach(chip => {
-
-chip.addEventListener("click",()=>{
-
-document
-.querySelectorAll(".filter-chip")
-.forEach(c=>c.classList.remove("active"));
-
-chip.classList.add("active");
-
-currentCategory = chip.dataset.category;
-
-currentPage = 1;
-
-renderTools();
-
-});
-
-});
-
-renderFeatured();
-renderTools();
-
 </script>
 
 </body>
