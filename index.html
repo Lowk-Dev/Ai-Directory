@@ -168,14 +168,14 @@ html.light-mode .mobile-nav{background:rgba(248,250,252,.9);}
 </nav>
 <section class="hero container">
     <h1>Discover The Best <span class="gradient">AI Tools</span></h1>
-    <p>Explore 350+ AI tools across 30+ categories. Find the perfect solution for students, developers, creators, and businesses.</p>
+    <p>Explore 250+ AI tools across 40+ categories. Find the perfect solution for students, developers, creators, and businesses.</p>
     <div class="stats-section">
         <div class="stat-card">
             <div class="stat-number" id="toolCountStat">0</div>
             <div class="stat-label">AI Tools Listed</div>
         </div>
         <div class="stat-card">
-            <div class="stat-number">30+</div>
+            <div class="stat-number">40+</div>
             <div class="stat-label">Categories</div>
         </div>
         <div class="stat-card">
@@ -218,6 +218,13 @@ html.light-mode .mobile-nav{background:rgba(248,250,252,.9);}
             <div class="filter-chip" data-category="Free">💚 Free</div>
             <div class="filter-chip" data-category="Gaming">🎮 Gaming</div>
             <div class="filter-chip" data-category="Fun">🎉 Fun</div>
+            <div class="filter-chip" data-category="Roblox">🎮 Roblox</div>
+            <div class="filter-chip" data-category="Healthcare">🏥 Healthcare</div>
+            <div class="filter-chip" data-category="Finance">💰 Finance</div>
+            <div class="filter-chip" data-category="E-commerce">🛒 E-commerce</div>
+            <div class="filter-chip" data-category="Social Media">📱 Social Media</div>
+            <div class="filter-chip" data-category="Security">🔒 Security</div>
+            <div class="filter-chip" data-category="HR">👥 HR</div>
         </div>
     </div>
 </section>
@@ -258,7 +265,7 @@ html.light-mode .mobile-nav{background:rgba(248,250,252,.9);}
                 <div class="footer-stat-label">Tools Indexed</div>
             </div>
             <div class="footer-stat">
-                <div class="footer-stat-num">30+</div>
+                <div class="footer-stat-num">40+</div>
                 <div class="footer-stat-label">Categories</div>
             </div>
             <div class="footer-stat">
@@ -370,13 +377,13 @@ const tools=[
 {name:"HubSpot AEO",description:"AI agents for marketing.",details:"Prospecting and customer management.",category:["Developers","Teachers","Business"],pricing:"Paid",website:"https://www.hubspot.com",tags:["Marketing"],rating:4.7,users:95,updated:"2026-05-01",trending:true},
 {name:"Decktopus",description:"AI presentation with brand kits.",details:"Auto-generate presentations.",category:["Teachers"],pricing:"Freemium",website:"https://www.decktopus.com",tags:["Presentations"],rating:4.5,users:35,updated:"2026-04-22",trending:false},
 {name:"Braze",description:"Customer engagement with AI.",details:"Mobile messaging with AI timing.",category:["Developers","Business"],pricing:"Paid",website:"https://www.braze.com",tags:["Marketing"],rating:4.7,users:88,updated:"2026-04-26",trending:false},
-{name:"Klaviyo",description:"E-commerce marketing with AI.",details:"Email and SMS with predictive analytics.",category:["Developers","Business"],pricing:"Freemium",website:"https://www.klaviyo.com",tags:["Email","Marketing"],rating:4.7,users:92,updated:"2026-04-24",trending:false},
-{name:"Sprout Social",description:"Social media management with AI.",details:"Optimal posting and sentiment analysis.",category:["Teachers","Business"],pricing:"Paid",website:"https://www.sproutsocial.com",tags:["Social Media"],rating:4.6,users:73,updated:"2026-04-23",trending:false},
+{name:"Klaviyo",description:"E-commerce marketing with AI.",details:"Email and SMS with predictive analytics.",category:["E-commerce"],pricing:"Freemium",website:"https://www.klaviyo.com",tags:["Email","Marketing"],rating:4.7,users:92,updated:"2026-04-24",trending:false},
+{name:"Sprout Social",description:"Social media management with AI.",details:"Optimal posting and sentiment analysis.",category:["Social Media","Business"],pricing:"Paid",website:"https://www.sproutsocial.com",tags:["Social Media"],rating:4.6,users:73,updated:"2026-04-23",trending:false},
 {name:"Drift",description:"Conversational marketing platform.",details:"AI chatbots for leads.",category:["Developers","Business"],pricing:"Paid",website:"https://www.drift.com",tags:["Chatbot","Marketing"],rating:4.6,users:68,updated:"2026-04-20",trending:false},
 {name:"ActiveCampaign",description:"Marketing automation with AI.",details:"Email with predictive sending.",category:["Developers","Business"],pricing:"Paid",website:"https://www.activecampaign.com",tags:["Marketing"],rating:4.6,users:71,updated:"2026-04-19",trending:false},
 {name:"Intercom",description:"Customer messaging with AI.",details:"Chat, chatbots, and support.",category:["Developers","Business"],pricing:"Paid",website:"https://www.intercom.com",tags:["Support"],rating:4.7,users:85,updated:"2026-04-25",trending:false},
 {name:"VEED",description:"AI video editing for creators.",details:"Auto transcription and subtitles.",category:["Video"],pricing:"Freemium",website:"https://www.veed.io",tags:["Video"],rating:4.7,users:54,updated:"2026-04-28",trending:true},
-{name:"Omnisend",description:"Email and SMS with AI.",details:"E-commerce marketing automation.",category:["Teachers","Business"],pricing:"Freemium",website:"https://www.omnisend.com",tags:["Email","Marketing"],rating:4.6,users:49,updated:"2026-04-21",trending:false},
+{name:"Omnisend",description:"Email and SMS with AI.",details:"E-commerce marketing automation.",category:["E-commerce","Business"],pricing:"Freemium",website:"https://www.omnisend.com",tags:["Email","Marketing"],rating:4.6,users:49,updated:"2026-04-21",trending:false},
 {name:"Marketo Engage",description:"B2B marketing automation.",details:"Lead management with AI.",category:["Developers","Business"],pricing:"Paid",website:"https://business.adobe.com/products/marketo/adobe-marketo.html",tags:["Marketing"],rating:4.6,users:77,updated:"2026-04-22",trending:false},
 {name:"Salesforce Marketing Cloud",description:"Enterprise marketing platform.",details:"Personalized customer journeys.",category:["Developers","Business"],pricing:"Paid",website:"https://www.salesforce.com/products/marketing-cloud/",tags:["Marketing"],rating:4.7,users:98,updated:"2026-04-26",trending:false},
 {name:"Seismic",description:"AI sales enablement.",details:"Content automation for sales.",category:["Developers"],pricing:"Paid",website:"https://www.seismic.com",tags:["Sales"],rating:4.6,users:63,updated:"2026-04-18",trending:false},
@@ -433,7 +440,9 @@ const tools=[
 {name:"Artlist Studio",description:"Video production suite.",details:"Automates production.",category:["Video"],pricing:"Paid",website:"https://www.artlist.io/studio",tags:["Video"],rating:4.6,users:28,updated:"2026-04-14",trending:false},
 {name:"VidIQ",description:"YouTube optimization.",details:"Keyword research tool.",category:["Video"],pricing:"Freemium",website:"https://www.vidiq.com",tags:["YouTube"],rating:4.6,users:72,updated:"2026-04-19",trending:false},
 {name:"TubeBuddy",description:"YouTube management.",details:"Bulk processing tools.",category:["Video"],pricing:"Freemium",website:"https://www.tubebuddy.com",tags:["YouTube"],rating:4.6,users:68,updated:"2026-04-18",trending:false},
-{name:"Roblox AI Assistant",description:"AI helper for game creation.",details:"Script generation and debugging.",category:["Gaming","Developers"],pricing:"Free",website:"https://www.roblox.com",tags:["Gaming"],rating:4.5,users:28,updated:"2026-05-01",trending:true},
+{name:"Roblox AI Assistant",description:"AI helper for Roblox game creation.",details:"Script generation and debugging for Roblox Lua.",category:["Gaming","Developers","Roblox"],pricing:"Free",website:"https://www.roblox.com",tags:["Roblox","Gaming"],rating:4.7,users:88,updated:"2026-05-01",trending:true},
+{name:"Roblox Studio Enhancement",description:"Enhanced Roblox development tools.",details:"AI-powered script suggestions and optimization for Roblox Studio.",category:["Roblox","Developers"],pricing:"Free",website:"https://developer.roblox.com",tags:["Roblox","Development"],rating:4.6,users:76,updated:"2026-05-02",trending:true},
+{name:"Roblox Creator Assistant",description:"Roblox game building assistant.",details:"AI guidance for creating Roblox games and experiences.",category:["Roblox","Gaming"],pricing:"Free",website:"https://www.roblox.com",tags:["Roblox"],rating:4.5,users:64,updated:"2026-04-30",trending:true},
 {name:"GameMaker AI",description:"AI-powered game development.",details:"Sprite and code generation.",category:["Gaming","Developers"],pricing:"Freemium",website:"https://gamemaker.io",tags:["Gaming"],rating:4.6,users:22,updated:"2026-04-30",trending:true},
 {name:"Decentraland Studio",description:"Metaverse content creation.",details:"Web3 game building.",category:["Gaming","Developers"],pricing:"Free",website:"https://builder.decentraland.org",tags:["Gaming"],rating:4.4,users:15,updated:"2026-04-28",trending:false},
 {name:"AI Dungeon",description:"Interactive text adventures.",details:"GPT-powered storytelling.",category:["Fun","Gaming"],pricing:"Freemium",website:"https://www.aidungeon.io",tags:["Gaming","Entertainment"],rating:4.5,users:45,updated:"2026-04-27",trending:true},
@@ -464,7 +473,51 @@ const tools=[
 {name:"Free Trial AI Tools",description:"Access premium tools free.",details:"Limited-time trials.",category:["Students","Free"],pricing:"Free",website:"https://www.freetoolsai.com",tags:["Directory"],rating:4.2,users:42,updated:"2026-04-28",trending:false},
 {name:"AllTheAITools",description:"Comprehensive AI directory.",details:"Curated AI collection.",category:["Students"],pricing:"Free",website:"https://alltheaitools.com",tags:["Directory"],rating:4.3,users:56,updated:"2026-04-27",trending:false},
 {name:"ThatAIPerson",description:"AI news and reviews.",details:"Stay updated on AI.",category:["Students"],pricing:"Free",website:"https://thatai.person",tags:["News"],rating:4.1,users:33,updated:"2026-04-26",trending:false},
-{name:"Supertools",description:"Collection of AI utilities.",details:"Productivity toolkit.",category:["Developers","Teachers"],pricing:"Free",website:"https://www.supertools.therundown.ai",tags:["Utilities"],rating:4.4,users:47,updated:"2026-04-25",trending:false}
+{name:"Supertools",description:"Collection of AI utilities.",details:"Productivity toolkit.",category:["Developers","Teachers"],pricing:"Free",website:"https://www.supertools.therundown.ai",tags:["Utilities"],rating:4.4,users:47,updated:"2026-04-25",trending:false},
+{name:"Doctorai",description:"AI medical diagnosis assistant.",details:"Medical imaging analysis and diagnostic support for healthcare professionals.",category:["Healthcare"],pricing:"Paid",website:"https://www.doctorai.io",tags:["Healthcare","Medical"],rating:4.8,users:35,updated:"2026-05-01",trending:true},
+{name:"Radiology AI",description:"AI radiology imaging analysis.",details:"Advanced image analysis for radiology with AI interpretation.",category:["Healthcare"],pricing:"Paid",website:"https://www.radiologyai.com",tags:["Healthcare","Imaging"],rating:4.7,users:28,updated:"2026-04-28",trending:true},
+{name:"PatientAI",description:"Patient data analysis system.",details:"AI-powered patient record analysis and insights.",category:["Healthcare"],pricing:"Paid",website:"https://www.patientai.com",tags:["Healthcare","Data"],rating:4.6,users:22,updated:"2026-04-25",trending:false},
+{name:"HealthAssist AI",description:"Healthcare assistant AI.",details:"Symptom checking and health guidance with AI.",category:["Healthcare"],pricing:"Freemium",website:"https://www.healthassist.ai",tags:["Healthcare"],rating:4.5,users:18,updated:"2026-04-22",trending:true},
+{name:"MediBot AI",description:"Medical chatbot assistant.",details:"AI chatbot for patient education and support.",category:["Healthcare"],pricing:"Freemium",website:"https://www.medibot.ai",tags:["Healthcare","Chatbot"],rating:4.6,users:26,updated:"2026-05-01",trending:true},
+{name:"FinanceGPT",description:"AI financial analysis tool.",details:"Real-time market analysis and investment insights with AI.",category:["Finance"],pricing:"Freemium",website:"https://www.financegpt.ai",tags:["Finance","Trading"],rating:4.7,users:42,updated:"2026-05-02",trending:true},
+{name:"TradingBot AI",description:"Automated trading assistant.",details:"AI-powered trading strategies and market analysis.",category:["Finance"],pricing:"Paid",website:"https://www.tradingbot.ai",tags:["Finance","Trading"],rating:4.8,users:68,updated:"2026-05-01",trending:true},
+{name:"InvestmentAI",description:"Investment portfolio analyzer.",details:"AI-driven portfolio optimization and recommendations.",category:["Finance"],pricing:"Freemium",website:"https://www.investmentai.io",tags:["Finance","Investment"],rating:4.6,users:34,updated:"2026-04-28",trending:false},
+{name:"StockPredictorAI",description:"Stock price prediction AI.",details:"Machine learning based stock market predictions.",category:["Finance"],pricing:"Paid",website:"https://www.stockpredictor.ai",tags:["Finance","Trading"],rating:4.5,users:29,updated:"2026-04-25",trending:true},
+{name:"CryptoAnalyzer AI",description:"Cryptocurrency analysis tool.",details:"Real-time crypto market analysis and signals.",category:["Finance"],pricing:"Freemium",website:"https://www.cryptoanalyzer.ai",tags:["Finance","Crypto"],rating:4.6,users:38,updated:"2026-05-01",trending:true},
+{name:"ShoppyAI",description:"E-commerce product recommender.",details:"AI-powered personalized product recommendations for online stores.",category:["E-commerce"],pricing:"Freemium",website:"https://www.shoppyai.io",tags:["E-commerce","Retail"],rating:4.7,users:45,updated:"2026-05-02",trending:true},
+{name:"CartInsight AI",description:"Shopping cart optimization AI.",details:"AI analytics for reducing cart abandonment.",category:["E-commerce"],pricing:"Freemium",website:"https://www.cartinsight.ai",tags:["E-commerce","Analytics"],rating:4.6,users:31,updated:"2026-04-28",trending:false},
+{name:"CustomerDNA AI",description:"E-commerce customer analytics.",details:"AI customer segmentation and behavior analysis.",category:["E-commerce"],pricing:"Paid",website:"https://www.customerdna.ai",tags:["E-commerce","CRM"],rating:4.7,users:27,updated:"2026-04-25",trending:true},
+{name:"PricingAI",description:"Dynamic pricing optimization.",details:"AI-powered price optimization for e-commerce.",category:["E-commerce"],pricing:"Paid",website:"https://www.pricingai.io",tags:["E-commerce","Pricing"],rating:4.5,users:19,updated:"2026-04-20",trending:false},
+{name:"ReviewsGenie AI",description:"Review analysis and response tool.",details:"AI automated review monitoring and response generation.",category:["E-commerce"],pricing:"Freemium",website:"https://www.reviewsgenie.ai",tags:["E-commerce","Reviews"],rating:4.6,users:24,updated:"2026-05-01",trending:true},
+{name:"SocialPost AI",description:"Social media content generator.",details:"AI-powered social media post creation for multiple platforms.",category:["Social Media"],pricing:"Freemium",website:"https://www.socialpost.ai",tags:["Social Media","Content"],rating:4.6,users:52,updated:"2026-05-02",trending:true},
+{name:"HashtagMaster AI",description:"Hashtag research and optimization.",details:"AI-powered hashtag suggestions and analytics.",category:["Social Media"],pricing:"Freemium",website:"https://www.hashtagmaster.ai",tags:["Social Media"],rating:4.5,users:38,updated:"2026-04-28",trending:false},
+{name:"InfluencerFinder AI",description:"Influencer discovery tool.",details:"AI matching influencers with brands.",category:["Social Media"],pricing:"Freemium",website:"https://www.influencerfinder.ai",tags:["Social Media","Marketing"],rating:4.7,users:41,updated:"2026-04-25",trending:true},
+{name:"SentimentAnalyzer AI",description:"Social media sentiment analysis.",details:"Real-time sentiment tracking across platforms.",category:["Social Media"],pricing:"Freemium",website:"https://www.sentimentanalyzer.ai",tags:["Social Media","Analytics"],rating:4.6,users:35,updated:"2026-05-01",trending:false},
+{name:"TrendTracker AI",description:"Social media trend detection.",details:"AI-powered trending topic and hashtag identification.",category:["Social Media"],pricing:"Freemium",website:"https://www.trendtracker.ai",tags:["Social Media","Trends"],rating:4.7,users:48,updated:"2026-05-02",trending:true},
+{name:"CyberGuard AI",description:"AI cybersecurity threat detection.",details:"Real-time threat detection and prevention system.",category:["Security"],pricing:"Paid",website:"https://www.cyberguard.ai",tags:["Security","Threat Detection"],rating:4.8,users:62,updated:"2026-05-01",trending:true},
+{name:"PasswordVault AI",description:"AI password management system.",details:"Secure password storage with AI anomaly detection.",category:["Security"],pricing:"Freemium",website:"https://www.passwordvault.ai",tags:["Security","Password Management"],rating:4.7,users:44,updated:"2026-04-28",trending:false},
+{name:"FraudDetector AI",description:"Fraud detection system.",details:"AI-powered fraud detection for financial transactions.",category:["Security","Finance"],pricing:"Paid",website:"https://www.frauddetector.ai",tags:["Security","Fraud"],rating:4.8,users:39,updated:"2026-05-01",trending:true},
+{name:"VulnerabilityScanner AI",description:"Security vulnerability scanner.",details:"Automated vulnerability scanning and reporting.",category:["Security","Developers"],pricing:"Freemium",website:"https://www.vulnscanner.ai",tags:["Security","DevSecOps"],rating:4.6,users:28,updated:"2026-04-25",trending:false},
+{name:"AccessControl AI",description:"AI access management system.",details:"Intelligent access control and permission management.",category:["Security","Business"],pricing:"Paid",website:"https://www.accesscontrol.ai",tags:["Security","Access Control"],rating:4.7,users:33,updated:"2026-05-01",trending:true},
+{name:"TalentMatch AI",description:"Recruitment and hiring AI.",details:"AI-powered candidate matching and recruitment.",category:["HR"],pricing:"Freemium",website:"https://www.talentmatch.ai",tags:["HR","Recruitment"],rating:4.7,users:56,updated:"2026-05-02",trending:true},
+{name:"PerformanceAI",description:"Employee performance analytics.",details:"AI analysis of employee performance metrics.",category:["HR"],pricing:"Freemium",website:"https://www.performanceai.io",tags:["HR","Analytics"],rating:4.6,users:32,updated:"2026-04-28",trending:false},
+{name:"SalaryOptimizer AI",description:"Compensation analysis AI.",details:"AI-powered salary benchmarking and optimization.",category:["HR"],pricing:"Paid",website:"https://www.salaryoptimizer.ai",tags:["HR","Compensation"],rating:4.5,users:24,updated:"2026-04-25",trending:true},
+{name:"LearnPath AI",description:"Employee training recommender.",details:"AI-personalized learning paths for employees.",category:["HR"],pricing:"Freemium",website:"https://www.learnpath.ai",tags:["HR","Training"],rating:4.6,users:29,updated:"2026-04-20",trending:false},
+{name:"CultureAssess AI",description:"Company culture analytics.",details:"AI assessment of organizational culture and engagement.",category:["HR","Business"],pricing:"Freemium",website:"https://www.cultureassess.ai",tags:["HR","Culture"],rating:4.7,users:34,updated:"2026-05-01",trending:true},
+{name:"TaxBot AI",description:"AI tax preparation assistant.",details:"AI-powered tax filing and deduction optimization.",category:["Finance","Business"],pricing:"Freemium",website:"https://www.taxbot.ai",tags:["Finance","Tax"],rating:4.6,users:43,updated:"2026-05-01",trending:true},
+{name:"ContractAnalyzer AI",description:"AI contract review tool.",details:"Automated contract analysis and risk detection.",category:["Business","Finance"],pricing:"Paid",website:"https://www.contractanalyzer.ai",tags:["Legal","Business"],rating:4.7,users:37,updated:"2026-04-28",trending:true},
+{name:"ComplianceAI",description:"Regulatory compliance tool.",details:"AI monitoring and compliance reporting.",category:["Business","Security"],pricing:"Paid",website:"https://www.complianceai.io",tags:["Compliance","Business"],rating:4.8,users:41,updated:"2026-05-01",trending:true},
+{name:"DataPrivacy AI",description:"GDPR and privacy compliance.",details:"AI-powered data privacy and GDPR compliance management.",category:["Security","Business"],pricing:"Paid",website:"https://www.dataprivacy.ai",tags:["Privacy","Compliance"],rating:4.7,users:36,updated:"2026-04-25",trending:false},
+{name:"DueDigligence AI",description:"Business due diligence tool.",details:"AI-powered company research and due diligence.",category:["Business","Finance"],pricing:"Paid",website:"https://www.duediligence.ai",tags:["Business","Research"],rating:4.6,users:28,updated:"2026-04-20",trending:true},
+{name:"QualityControl AI",description:"Manufacturing quality assurance.",details:"AI-powered quality control and defect detection.",category:["Business"],pricing:"Paid",website:"https://www.qc-ai.io",tags:["Manufacturing","Quality"],rating:4.8,users:45,updated:"2026-05-02",trending:true},
+{name:"SupplyChain AI",description:"Supply chain optimization.",details:"AI-powered supply chain analytics and optimization.",category:["Business"],pricing:"Paid",website:"https://www.supplychainai.io",tags:["Supply Chain","Logistics"],rating:4.7,users:38,updated:"2026-04-28",trending:true},
+{name:"InventoryAI",description:"Inventory management system.",details:"AI demand forecasting and inventory optimization.",category:["Business"],pricing:"Freemium",website:"https://www.inventoryai.io",tags:["Inventory","Logistics"],rating:4.6,users:34,updated:"2026-05-01",trending:false},
+{name:"LogisticsGPT",description:"Logistics optimization AI.",details:"Route planning and delivery optimization.",category:["Business"],pricing:"Freemium",website:"https://www.logisticsgpt.ai",tags:["Logistics","Optimization"],rating:4.7,users:32,updated:"2026-04-25",trending:true},
+{name:"PropertyFinder AI",description:"Real estate AI assistant.",details:"AI-powered property search and valuation.",category:["Business"],pricing:"Freemium",website:"https://www.propertyfinderai.io",tags:["Real Estate"],rating:4.6,users:39,updated:"2026-05-01",trending:true},
+{name:"ExtractionAI",description:"Data extraction and OCR.",details:"AI document data extraction and digitization.",category:["Business","Developers"],pricing:"Freemium",website:"https://www.extractionai.io",tags:["Data","OCR"],rating:4.7,users:51,updated:"2026-05-02",trending:false},
+{name:"SummarizeAI",description:"Document summarization AI.",details:"AI-powered document and text summarization.",category:["Business","Students"],pricing:"Freemium",website:"https://www.summarizeai.io",tags:["Summarization","Reading"],rating:4.6,users:48,updated:"2026-04-28",trending:false},
+{name:"TranslateAI Pro",description:"Advanced translation service.",details:"AI professional translation with context understanding.",category:["Business","Students"],pricing:"Freemium",website:"https://www.translateaipro.io",tags:["Translation","Languages"],rating:4.7,users:55,updated:"2026-05-01",trending:false},
+{name:"SpeechToAI",description:"Advanced speech recognition.",details:"AI speech-to-text with high accuracy.",category:["Business","Developers"],pricing:"Freemium",website:"https://www.speechtoai.io",tags:["Speech","Transcription"],rating:4.6,users:44,updated:"2026-04-25",trending:false}
 ];
 const itemsPerPage=12;let currentPage=1;let filteredTools=[...tools];
 document.addEventListener('DOMContentLoaded',()=>{updateToolCount();displayFeatured();displayTools();setupFilters();setupSearch();setupSort();updateFavoriteCount();});
